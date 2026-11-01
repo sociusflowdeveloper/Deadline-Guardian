@@ -4,14 +4,14 @@
 
 
 **Publisher (proposed):** SociusFlow Pte. Ltd.  
-**Status:** T03 COMPARATOR IMPLEMENTED ON THIS BRANCH / EXPORT PENDING / NO PRODUCT RELEASE
+**Status:** T04 DRAFT EXPORTS IMPLEMENTED ON THIS BRANCH / SKILL PACKAGE PENDING / NO PRODUCT RELEASE
 **Prepared:** 1 November 2026 (Asia/Singapore) | **Default legal context:** Singapore
 
 > When an assessment deadline changes, see exactly what changed and where the evidence came from, then review it before modifying your plan.
 
 ## This package is not a functioning Agent Skill
 
-These files are **pre-repository planning, risk, API and legal drafts** prepared against the SociusFlow checklist. T02 adds a tested local validation CLI; T03 adds deterministic draft comparison. There is still no tested `SKILL.md` or file exporter, remote API, account, database, effective privacy/terms commitment or approved product release. The repository and original ZIP are already public. Rights, trade-mark, security and product-release evidence remain open.
+These files are **pre-repository planning, risk, API and legal drafts** prepared against the SociusFlow checklist. T02 adds a tested local validation CLI; T03 adds deterministic draft comparison; T04 adds explicit local draft exports. There is still no tested `SKILL.md`, remote API, account, database, effective privacy/terms commitment or approved product release. The repository and original ZIP are already public. Rights, trade-mark, security and product-release evidence remain open.
 
 ## Documents
 
@@ -46,10 +46,10 @@ There is **no authorised automatic calendar update, AI model API key, company da
 
 1. Use the adopted T00 prototype decision in DECISIONS.md; demand validation remains open.
 2. Use the independently reviewed T01 schema/semantic contract.
-3. Continue from the implemented T02 validator and T03 comparator with T04 exporter in a fresh ticket-limited context after prerequisite review/check gates.
+3. Continue from the implemented T02 validator, T03 comparator and T04 exporters with T05 skill authoring in a fresh ticket-limited context after T03/T04 prerequisite review/check gates.
 4. Require actual tests, independent review, rights/privacy checks and a separate MD decision before a public product release.
 
-**Current disposition:** GO for constrained fictional-data prototype work; NO-GO for public product release. Validation and comparison code exist on this branch; export and host integration remain later tickets.
+**Current disposition:** GO for constrained fictional-data prototype work; NO-GO for public product release. Validation, comparison and explicit local export code exist on this branch; skill packaging and host integration remain later tickets.
 
 ## Current engineering entry points
 
@@ -74,9 +74,9 @@ python skills/academic-deadline-drift-guard/scripts/reconcile.py \
   --after examples/fictional-after.json
 ```
 
-Success prints draft JSON to standard output with `result_status=REVIEW_REQUIRED`, all six provisional status labels as applicable and `confirmed_changes=[]`. Exit 0 means a draft was generated, including possible conflicts; it never confirms a deadline. The helper does not save a report or modify calendars. Explicit safe file export belongs to T04.
+Success prints draft JSON to standard output with `result_status=REVIEW_REQUIRED`, all six provisional status labels as applicable and `confirmed_changes=[]`. Exit 0 means a draft was generated, including possible conflicts; it never confirms a deadline. This default invocation does not save a report. The helper never modifies calendars. Explicit safe file export is available as described below.
 
-Run `python -m unittest discover -s tests -v`. See [T02 verification](T02_VERIFICATION.md) and [T03 verification](T03_VERIFICATION.md) for actual checks and limitations.
+Run `python -m unittest discover -s tests -v`. See [T02 verification](T02_VERIFICATION.md) and [T03 verification](T03_VERIFICATION.md) for historical checks; see [T04 verification](T04_VERIFICATION.md) for current export checks and limitations.
 
 ## Version history and completeness
 
@@ -85,3 +85,19 @@ Run `python -m unittest discover -s tests -v`. See [T02 verification](T02_VERIFI
 ## Language and code hygiene
 
 Follow [LANGUAGE_POLICY.md](LANGUAGE_POLICY.md): Python for application/tests, JSON for contracts/data, Markdown for documentation and YAML for CI; short fixed shell commands only for CI glue. Keep only relevant code and dependencies. Additional languages, runtimes or frameworks require an approved need and ADR.
+
+## Save a draft report explicitly
+
+Use a new destination inside the selected workspace; its parent directory must already exist. The default command above still only prints draft JSON. Saving a report requires both `--output` and `--format`:
+
+```bash
+python skills/academic-deadline-drift-guard/scripts/reconcile.py \
+  --workspace . \
+  --before examples/fictional-before.json \
+  --after examples/fictional-after.json \
+  --output draft-report.md --format markdown
+```
+
+Formats: `json` with `.json`, `csv` with `.csv`, `markdown` with `.md`. Choose a different new filename for each run; existing targets, symlink components and unsafe paths are rejected. No overwrite or implicit directory creation is supported.
+
+Exports remain unconfirmed proposals, including conflicts and unknown dates. JSON preserves canonical evidence strings. CSV formula neutralisation and Markdown escaping change display representations without changing canonical input evidence. Review reports before acting; exported evidence remains untrusted data. Keep real reports outside public repositories and delete local exports/backups yourself when no longer needed; the helper does not erase AI-provider chats or uploads.

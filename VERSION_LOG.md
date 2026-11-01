@@ -2,6 +2,15 @@
 
 Maintained change history. All dates use Asia/Singapore. Prototype versions are engineering identifiers, not approved product releases. Every change-bearing PR must update this file; see AGENTS.md. Historical entries below are reconstructed from inspected Git history, not newly asserted approvals.
 
+## 0.3.0-prototype-t04 — 2 November 2026 — T04
+
+- State: implemented on a feature branch stacked on T03 PR #4. Local verification: 66 tests run, 65 passed and one inherited UNIX-socket capability skip; compile/whitespace checks passed. Independent technical review found no material defect; details in T04_VERIFICATION.md; current-head CI and human approval remain separate gates. No merge or product release is claimed.
+- Changes: explicit new-file draft exports in JSON, CSV and Markdown; destination confinement, no overwrite, safe rendering and negative write tests. Stdout-only default remains available. No new dependency, network, account, automatic calendar change or confirmed deadline.
+- Organisation: current README/API/ticket/data/security/deletion documentation reconciled; completeness assessed against unchanged weights at 65/100 after local checks/review, exceeding the requested 60/100 by completing the coherent T04 ticket.
+- Verification: T04_VERIFICATION.md records actual commands/results, failed reproductions, capability skips and independent review. T03 PR #4 CI run 41325807541 is CONFIRMED successful at commit 8eb634b201026ecc0f5e0e19f7dcd1b7a816807e; T03 remains unmerged. Historical T03 entry/verification are retained as prepared.
+- Remaining: stacked PR review/CI/merge order, T05–T09, demand interviews and rights/privacy/release clearance. Stop this implementation session at T04; next owner is a fresh T05 context after prerequisite gates.
+- Rollback: close the T04 PR before merge; reviewed revert after authorised merge restores T03 stdout behaviour. Previously requested exports remain user-managed files; reverting code does not delete them or provider copies.
+
 ## 0.2.0-prototype-t03 — 2 November 2026 — T03
 
 - State: implemented on feature branch; local verification and independent technical review recorded; PR checks tracked in T03_VERIFICATION.md. Not merged or released at preparation.
