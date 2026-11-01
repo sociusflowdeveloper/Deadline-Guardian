@@ -1,8 +1,8 @@
 # CODE_STYLE.md — Engineering Standards
 
-> **Repository reconciliation, 1 November 2026 (SGT):** No Python application, test suite, package manifest or workflow was present at the inspected baseline. Commands in this file are future implementation checks, not executed application tests. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Repository reconciliation, 1 November 2026 (SGT):** The initial baseline had no Python implementation. T02 now adds a validation-only CLI, tests and CI configuration; T02_VERIFICATION.md records executed checks. No comparator/exporter or runtime dependency is added. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
 
-**Status:** PROPOSAL, no code yet | **Runtime:** Python 3.11+ standard library | **Language:** British English for user-facing text.
+**Status:** Engineering standards applied to T02 validator; later ticket implementation pending | **Runtime:** Python 3.11+ standard library | **Language:** British English for user-facing text.
 
 ## 1. Principles
 

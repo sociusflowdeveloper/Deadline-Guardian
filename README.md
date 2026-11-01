@@ -4,14 +4,14 @@
 
 
 **Publisher (proposed):** SociusFlow Pte. Ltd.  
-**Status:** DOCUMENTATION DRAFT / NOT IMPLEMENTED / NOT CLEARED FOR PUBLIC RELEASE  
+**Status:** T02 VALIDATOR IMPLEMENTED / COMPARISON AND EXPORT PENDING / NO PRODUCT RELEASE
 **Prepared:** 1 November 2026 (Asia/Singapore) | **Default legal context:** Singapore
 
 > When an assessment deadline changes, see exactly what changed and where the evidence came from, then review it before modifying your plan.
 
 ## This package is not a functioning Agent Skill
 
-These files are **pre-repository planning, risk, API and legal drafts** prepared against the SociusFlow checklist. They do **not** create a tested `SKILL.md`, code, an API, an account, database, live privacy/terms commitments or an approved product release. The repository and original ZIP are already public. Rights, trade-mark, security and product-release evidence remain open.
+These files are **pre-repository planning, risk, API and legal drafts** prepared against the SociusFlow checklist. T02 adds a tested local validation CLI. There is still no tested `SKILL.md`, comparator/exporter, remote API, account, database, effective privacy/terms commitment or approved product release. The repository and original ZIP are already public. Rights, trade-mark, security and product-release evidence remain open.
 
 ## Documents
 
@@ -49,7 +49,7 @@ There is **no authorised automatic calendar update, AI model API key, company da
 3. Start T02 local validator in a fresh ticket-limited context, followed by comparator and exporter tickets.
 4. Require actual tests, independent review, rights/privacy checks and a separate MD decision before a public product release.
 
-**Current disposition:** GO for constrained fictional-data prototype work; NO-GO for public product release. No application code exists yet.
+**Current disposition:** GO for constrained fictional-data prototype work; NO-GO for public product release. T02 validation code exists; comparison and export remain later tickets.
 
 ## Current engineering entry points
 
@@ -61,4 +61,19 @@ The original `SociusFlow_Deadline_Drift_Guard_Pre_Repo_Pack.zip` is retained as 
 
 ## Current prototype decision
 
-The user has authorised resolving T00/T01 here. [DECISIONS.md](DECISIONS.md) records the adopted prototype choices and unvalidated-demand assumptions. [CONTRACT.md](CONTRACT.md), [schemas](schemas/snapshot-v1.schema.json) and [fictional cases](examples/contract-cases.json) freeze the T01 contract. [T01 technical acceptance](T01_VERIFICATION.md) is recorded; T02 validator implementation is next. No runnable CLI, host compatibility or release approval is claimed.
+The user has authorised resolving T00/T01 here. [DECISIONS.md](DECISIONS.md) records the adopted prototype choices and unvalidated-demand assumptions. [CONTRACT.md](CONTRACT.md), [schemas](schemas/snapshot-v1.schema.json) and [fictional cases](examples/contract-cases.json) freeze the T01 contract. [T01 technical acceptance](T01_VERIFICATION.md) is recorded; T02 validator implementation is available; T03 deterministic comparison is next. The validation-only CLI is runnable on the tested Linux environment; no comparator, host compatibility or release approval is claimed.
+
+## Run T02 input validation
+
+Python 3.11+ is required. The safe filesystem reader is implemented for POSIX environments with descriptor-relative no-follow file operations; tested locally on Linux. Unsupported platforms fail closed. No package installation or API key is needed.
+
+```bash
+python skills/academic-deadline-drift-guard/scripts/reconcile.py \
+  --workspace . \
+  --before examples/fictional-before.json \
+  --after examples/fictional-after.json
+```
+
+Expected: `VALIDATED_INPUTS: review required; comparison not yet implemented.` Exit 0 means input validation only, not a resolved deadline. The command does not generate a report, save output, compare dates or change a calendar yet.
+
+Run regression checks with `python -m unittest discover -s tests -v`. See [T02_VERIFICATION.md](T02_VERIFICATION.md) for actual results, capability skips and review limits.

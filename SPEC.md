@@ -5,7 +5,7 @@
 
 **Document ID:** ADDG-SPEC-001  
 **Version:** 0.2.0-prototype-contract | **Date:** 1 November 2026, SGT  
-**Classification:** Prototype engineering decisions adopted under user direction; empirical demand, application execution, host tests and product release remain unverified  
+**Classification:** Prototype engineering decisions adopted under user direction; empirical demand, comparator/export execution, host tests and product release remain unverified; T02 validator evidence is recorded separately
 **Proposed sponsor:** SociusFlow Pte. Ltd. | **Decision owner:** Managing Director | **Technical owner:** CTO  
 **Decision:** GO for the constrained offline fictional-data prototype under DG-DEC-001; **NO-GO for public release** until the listed gates are evidenced.
 
