@@ -69,3 +69,7 @@ Before merge, revise or close the T02 PR. After any separately authorised merge,
 The integrating agent reran unittest discovery: 39 methods, 38 passed, one environment socket skip, exit 0. Fifty independent real CLI probes (including all 37 fixture pairs, traversal, symlink, FIFO, directory, BOM, duplicate JSON keys, byte-limit and argument-redaction cases) passed on Linux/Python 3.12.14. Compilation passed. The final git diff --check includes intent-to-add entries for new implementation/test/workflow files and the updated documentation; exit 0 after removing introduced Markdown trailing whitespace.
 
 The separate reviewer inspected the pinned, read-only, bounded CI configuration and final code hashes. Actual remote head/check results are recorded in the T02 PR; this file does not preclaim remote CI success.
+
+## CI runtime follow-up
+
+The first remote PR run passed all 39 tests without skips on both Python 3.11 and 3.13, plus compilation and whitespace checks. Runner logs flagged the initial checkout/setup-python major versions as Node 20 actions being forced to Node 24. Before finalisation, their pins were updated to current primary-source release tags (checkout v7.0.1, setup-python v7.1.0), using immutable commit SHAs. Final-head CI must rerun after this workflow-only correction; its actual result is recorded in the PR.
