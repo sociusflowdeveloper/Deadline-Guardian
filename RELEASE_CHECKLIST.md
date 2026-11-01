@@ -1,13 +1,15 @@
 # RELEASE_CHECKLIST.md — Pre-Repo and Release Evidence Ledger
 
-> **Repository reconciliation, 1 November 2026 (SGT):** Distinguish public repository existence from product release approval. Existing LICENSE presence is confirmed, while rights clearance, tests, CI, compatibility and release authority remain open. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
-**Snapshot:** 1 November 2026 SGT | **State:** DOCUMENTS DRAFTED; BUILD AND PUBLIC RELEASE NOT APPROVED.  
+
+**Snapshot:** 1 November 2026 SGT | **State:** CONSTRAINED PROTOTYPE AUTHORISED; T01 CONTRACT ARTEFACTS; PUBLIC PRODUCT RELEASE NOT APPROVED.  
 `[x]` means this document exists in the **pack** (not approved, implemented or effective). `[ ]` means open. `N/A v0.1` means architecturally absent **only if the scope remains unchanged**.
 
 ## 1. Plan first
 
-- [ ] D01–D16 grilled with stakeholders and answers accepted; discovery completed.
+- [x] D01–D16 prototype engineering decisions recorded under user direction in DG-DEC-001.
+- [ ] Five adult-student interviews completed and demand threshold assessed before wider investment/product launch; not claimed complete.
 - [x] `SPEC.md` drafted with what, why, in/out scope and rationale.
 - [x] Exact stop/done criteria documented in `SPEC.md`.
 - [x] Small ticket backlog drafted in `TICKETS.md`.
@@ -88,7 +90,7 @@
 
 ## 9. Absolute public release gates
 
-- [ ] Discovery decision and prioritisation recorded.
+- [x] Prototype discovery decision and prioritisation recorded in DG-DEC-001; empirical demand validation remains OPEN.
 - [ ] All P0/P1 tickets accepted with evidence; no open stop-ship defects.
 - [ ] Real tests/CI pass on final head commit; no imaginary checks.
 - [ ] Host compatibility matrix includes actually tested versions and known limits.
@@ -97,11 +99,12 @@
 - [ ] External vulnerability reporting available; owner and rollback plan assigned.
 - [ ] Authorised Managing Director decision is recorded: **GO** for exact commit, else **NO-GO**.
 
-## Owner/decision record (empty by design)
+## Owner/decision record
 
 | Item | Decision | Owner/approver | Date SGT | Evidence |
 |---|---|---|---|---|
-| Scope approval | PENDING | Managing Director | — | — |
+| Constrained prototype scope | Authorised user direction; D01–D16 treatments adopted by engineering assistant | Managing Director / delegated engineering preparation | 1 Nov 2026 SGT | DECISIONS.md DG-DEC-001 |
+| T01 engineering acceptance | Accepted for constrained prototype, not production security | Engineering assistant + independent contract reviewer | 1 Nov 2026 SGT | T01_VERIFICATION.md |
 | CTO security sign-off | PENDING | CTO / independent reviewer | — | — |
 | DPO/privacy review | PENDING | Designated DPO (if appointed) | — | — |
 | IP and legal clearance | PENDING | Company + qualified adviser | — | — |

@@ -1,12 +1,13 @@
 # SPEC.md — Academic Deadline Drift Guard
 
-> **Repository reconciliation, 1 November 2026 (SGT):** This request authorises repository bootstrap and work under these documents. It does not supply missing D01–D16 answers, interview evidence or T01 approval. No such approval is recorded here. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
+
 
 **Document ID:** ADDG-SPEC-001  
-**Version:** 0.1.0-draft | **Date:** 1 November 2026, SGT  
-**Classification:** PROPOSAL — requirements only; no code, deployment, approvals or platform testing completed  
+**Version:** 0.2.0-prototype-contract | **Date:** 1 November 2026, SGT  
+**Classification:** Prototype engineering decisions adopted under user direction; empirical demand, application execution, host tests and product release remain unverified  
 **Proposed sponsor:** SociusFlow Pte. Ltd. | **Decision owner:** Managing Director | **Technical owner:** CTO  
-**Decision:** CONDITIONAL GO for discovery and a constrained prototype; **NO-GO for public release** until the listed gates are evidenced.
+**Decision:** GO for the constrained offline fictional-data prototype under DG-DEC-001; **NO-GO for public release** until the listed gates are evidenced.
 
 ## 1. Problem, user and outcome
 
@@ -22,7 +23,7 @@
 
 ## 2. Discovery questions that must be grilled before code
 
-Answers below are provisional assumptions, **not stakeholder approval**. The decision owner must record an answer and evidence, or explicitly accept the assumption, before ticket T02 (implementation).
+The original questions below are retained for traceability. Adopted engineering treatments and their assumptions are recorded in DECISIONS.md (DG-DEC-001), pursuant to the user instruction to resolve them here. Five interviews are not a prerequisite to prototype coding under this revision, but remain a wider-investment/product-launch gate. No empirical answer is invented.
 
 | ID | Challenging question | Provisional assumption | What would change the decision? |
 |---|---|---|---|
@@ -72,7 +73,7 @@ Account creation; server or cloud database; automated LMS/email/calendar access;
 
 ## 4. Exact MVP workflows and user stories
 
-**US01 — Changed deadline.** Given old `2026-11-12T17:00:00+08:00` and new `2026-11-14T23:59:00+08:00`, show `CHANGED`, cite old and new excerpts and require confirmation before a final export.
+**US01 — Changed deadline.** Given old `2026-11-12T17:00:00+08:00` and new `2026-11-14T23:59:00+08:00`, show `CHANGED`, cite old and new excerpts and require confirmation before acting on a draft. v0.1 never creates a final confirmed export.
 
 **US02 — Contradictory notices.** Given two credible candidate notices for the same item with different due dates, show `CONFLICT`, both dates and source IDs, then ask for verification. No arbitrary source priority.
 
@@ -133,13 +134,16 @@ Deadline-Guardian/
 │       ├── SKILL.md         # not created in this pre-repo pack
 │       ├── references/
 │       └── scripts/reconcile.py
-├── examples/                # strictly fictional
+├── DECISIONS.md             # DG-DEC-001 authority and assumptions
+├── CONTRACT.md              # canonical T01 semantics
+├── schemas/                 # snapshot/result v1 JSON Schemas
+├── examples/                # strictly fictional contract cases
 └── tests/
 ```
 
 ## 7. Ticket execution and agent loop controls
 
-Work is split into tickets in `TICKETS.md`. **One fresh coding agent per ticket** means a new task-limited context with only approved specifications, necessary code and current ticket; no cross-ticket autonomous continuation. Each ticket must:
+T00 decision preparation and T01 contract authoring were expressly authorised together in this session, with a separate T01 author and independent review. Actual application coding remains ticket-limited. Work is split into tickets in `TICKETS.md`. **One fresh coding agent per ticket** means a new task-limited context with only approved specifications, necessary code and current ticket; no cross-ticket autonomous continuation. Each ticket must:
 
 1. Read the approved `SPEC.md`, relevant security/data contract and its ticket.
 2. State `CONFIRMED`, `INFERENCE` or `ASSUMPTION` for material uncertain technical assertions.

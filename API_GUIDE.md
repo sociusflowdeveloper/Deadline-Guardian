@@ -1,115 +1,25 @@
 # API_GUIDE.md — Interface Contracts
 
-> **Repository reconciliation, 1 November 2026 (SGT):** No executable CLI exists. Contract contradictions requiring a T01 decision are listed in DISCOVERY.md; do not implement the illustrative examples as an approved schema. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
-**Status:** DRAFT CONTRACT; commands and endpoints below are **design proposals, not implemented or tested**.  
+
+**Status:** T01 canonical contract adopted for constrained prototype; no CLI implementation or runtime tests yet.  
 **v0.1 decision:** No HTTP endpoints, no webhooks, no OAuth, no SDK calls, no remote writes and no paid APIs.
 
-## 1. Boundaries and services
+## 1. Canonical contract
 
-`user → chosen AI host / agent instructions → structured JSON → offline Python validator/reconciler → draft report → user review → user-controlled output`.
+The current frozen snapshot/result schemas and all semantic invariants are in [CONTRACT.md](CONTRACT.md), [snapshot v1](schemas/snapshot-v1.schema.json), [result v1](schemas/result-v1.schema.json) and [fictional cases](examples/contract-cases.json). These replace the earlier split-field/derived due_at illustrations. Schemas are contracts, not an implemented validator.
 
-Only the user-selected host handles conversational input. The comparator must not communicate with the host's network APIs. The user's use of a hosted AI model is **not local-only processing**; its independent policies apply.
+The helper will accept only local structured JSON, never raw PDFs or source instructions. User-selected AI host extraction remains separate and untrusted. Full source text and matching literal excerpts support traceability, not authenticated provenance or a proof that a stated date is true.
 
-## 2. Proposed CLI
+## 2. CLI implementation target, not yet runnable
 
-```bash
-python skills/academic-deadline-drift-guard/scripts/reconcile.py \
-  --before examples/fictional-before.json \
-  --after examples/fictional-after.json \
-  --output report.json
-```
+`reconcile.py --workspace WORKSPACE --before BEFORE.json --after AFTER.json` is the future workspace-bound read interface. An explicit output destination and JSON/Markdown/CSV exporters belong to T04; no output overwrite is permitted. --help and --version must be deterministic when implemented. Exact syntax and exit/error contract are frozen in CONTRACT.md. No network, HTTP routes, webhooks or credentials.
 
-- `--before`, `--after`: explicitly chosen local `.json` files.
-- `--output`: new output file; no overwrites or directory traversal; do not permit write to input path.
-- `--format`: optional `json`, `md` or `csv` when implemented; default `json`.
-- `--help` and `--version`: documented and deterministic when implemented.
-- Exit codes **proposed**: `0` successful draft report; `2` invalid input; `3` unsafe/blocked operation; `4` processing failure. A detected conflict is not a successful resolved export; result contains unresolved status.
-- Standard output: concise non-sensitive summary; standard error: error code + field path, no input data or stack trace.
+The result always remains a draft, requires review, sets user_confirmed=false and has confirmed_changes=[]. A schema-valid successful draft may contain CONFLICT or UNVERIFIED; success never means a resolved deadline.
 
-## 3. Versioned JSON snapshot contract (proposed v1)
+## 3. Hosts and future integrations
 
-```json
-{
-  "schema_version": "1.0",
-  "snapshot_id": "synthetic-new",
-  "scope": "partial",
-  "sources": [
-    {
-      "source_id": "new-notice",
-      "source_type": "notice",
-      "label": "fictional notice",
-      "observed_at": null,
-      "authority_confirmed_by_user": false
-    }
-  ],
-  "records": [
-    {
-      "item_id": "marketing-report",
-      "module_id": "MKT101",
-      "title": "Marketing report",
-      "due_date": "2026-11-14",
-      "due_time": "23:59",
-      "timezone": "+08:00",
-      "time_precision": "minute",
-      "source_id": "new-notice",
-      "source_excerpt": "Report due 14 November 2026 at 23:59 SGT.",
-      "explicit_cancellation": false,
-      "user_confirmed": false
-    }
-  ]
-}
-```
+Python CLI is the first test target. Claude and a second eligible host need later real installation evidence before compatibility claims. A host without execution capability may display a manual evidence table, but must not pretend the helper ran. No host account/plan availability was verified in this decision.
 
-All example names and data are fictional. T01 must finalise a strict JSON Schema or equivalent validation and clear rules for duplicate/conflicting records **before** coding the comparator. A source is an asserted provenance reference, not cryptographic verification.
-
-## 4. Reconciliation output (proposed)
-
-```json
-{
-  "schema_version": "1.0",
-  "result_status": "REVIEW_REQUIRED",
-  "changes": [
-    {
-      "module_id": "MKT101",
-      "item_id": "marketing-report",
-      "status": "CHANGED",
-      "before_due_at": "2026-11-12T17:00:00+08:00",
-      "candidate_due_at": "2026-11-14T23:59:00+08:00",
-      "before_source_id": "old-brief",
-      "candidate_source_id": "new-notice",
-      "requires_user_review": true,
-      "user_confirmed": false
-    }
-  ],
-  "confirmed_changes": []
-}
-```
-
-`confirmed_changes` stays empty until a separate, explicit review step with a verifiable confirmation input is specified and implemented. The report must preserve source excerpts or stable references, with user-controlled privacy settings. No field is implied to be authenticated merely because it is present.
-
-## 5. Status and error contracts
-
-| Status | Meaning | Safe outcome |
-|---|---|---|
-| `UNCHANGED` | Same explicit, comparable values | No action |
-| `ADDED` | New item with evidence | Proposed addition; review |
-| `CHANGED` | Same stable item with different evidenced value | Proposed revision; review |
-| `REMOVED` | Explicitly cancelled by cited source | Proposed removal; review |
-| `CONFLICT` | Multiple incompatible candidate values | No final value; seek verification |
-| `UNVERIFIED` | Incomplete, ambiguous or unsupported | No final value; seek evidence |
-
-Error categories: `INVALID_SCHEMA`, `INVALID_DATE`, `AMBIGUOUS_TIMEZONE`, `DUPLICATE_IDENTIFIER`, `UNSAFE_PATH`, `INPUT_TOO_LARGE`, `UNSUPPORTED_VERSION`, `INTERNAL_ERROR`. No raw input in logs/errors. Partial inputs cannot be interpreted as deletion.
-
-## 6. Host adapter contract
-
-- **Canonical skill:** Uses standard `SKILL.md` with accurate description and explicit tool boundaries.
-- **Claude:** Install using current documented capability, manually test real invocation and file access.
-- **ChatGPT:** Install only in eligible, documented skill-capable environment; do not claim all ChatGPT accounts support the same mechanism.
-- **Grok:** Confirm the particular product/CLI supports the selected skills format and actual file execution; document limitations.
-- **Common fallback:** If the host cannot run scripts or save files, display a plain-text evidence table and label it manual/unverified. Never fake a tool result.
-- Record host version, date SGT, test transcript identifier, exact outcome and reviewer in the compatibility matrix.
-
-## 7. HTTP API change-control trigger
-
-Any proposed `/v1/*` route or remote integration requires: approved `SPEC.md` revision; authentication; server-side owner/tenant authorisation on **every** route; request schemas and size limits; error mapping; rate limits; audit/data-retention rules; abuse prevention; RLS where applicable; backup and deletion propagation; API versioning, idempotency, observability and rollback. No placeholder endpoints may be published as implemented.
+Any future HTTP route, calendar/remote write or hosted history requires separately approved scope, threat/data map, authorisation, quotas, deletion, recovery and release controls.

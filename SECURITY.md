@@ -49,7 +49,7 @@ The public repository exists. Before product release, maintainers **must verify 
 - **Hallucination:** Any inferred deadline absent verbatim supporting evidence is `UNVERIFIED`, not a confirmed change. Never present model confidence as proof.
 - **Data exfiltration:** No network, HTTP, SDK, outbound email or external analytics code in the helper. Agent instructions must not request credentials or upload unapproved files.
 - **Untrusted path traversal:** Resolve and constrain explicit input/output paths; reject symlinks that leave the permitted workspace and any path outside user-selected files. Do not recursively scan directories.
-- **Resource exhaustion:** Proposed maximum input size 1 MiB/file, 100 records/snapshot, 2,000 characters/excerpt; enforce and test as part of implementation. These are proposed limits, not measured defaults.
+- **Resource exhaustion:** Adopted T01 bounds: 1 MiB/file, 100 sources and 100 records/snapshot, 16,000 characters/source, 2,000 characters/excerpt, and maximum 16 container levels. Enforce and test in implementation; no runtime enforcement has been verified.
 - **Date confusion:** Explicit timezone required for exact instants; retain date-only values with date precision. Never assume SGT just because the developer is Singapore-based.
 - **CSV injection:** Escape/spreadsheet-sanitise leading `=`, `+`, `-`, `@`, tabs or control characters in exported text values. No automatic spreadsheet execution.
 - **File writes:** No automatic overwrite of original inputs or other apps' data. Output must be user-directed, isolated, and atomic where supported.
@@ -60,7 +60,7 @@ The public repository exists. Before product release, maintainers **must verify 
 
 - [ ] A forged source instruction cannot induce a shell command, environment read, network call or secret disclosure.
 - [ ] A crafted file path cannot access data outside explicitly selected paths.
-- [ ] Malformed JSON, impossible dates, duplicate item IDs and oversized payloads fail safely.
+- [ ] Malformed JSON, impossible dates, duplicate identity/source triples and oversized payloads fail safely.
 - [ ] A partial document cannot cancel a deadline and two inconsistent dates cannot be silently resolved.
 - [ ] Markdown/CSV outputs cannot execute scripts or formulas merely by opening them in standard viewers.
 - [ ] No source content or identifier leaks into logs, test artefacts, stack traces or unexpected output.
@@ -78,3 +78,7 @@ The public repository exists. Before product release, maintainers **must verify 
 One fresh agent per ticket; one independent technical/security agent review for proactive work; human PR approval; passing checks; no bypasses, force pushes or unverified production actions. High-risk changes require a refreshed data map, threat model, test cases and rollback instructions. All work must comply with `SPEC.md`, `AI_WORKING_RULES.md`, and `RELEASE_CHECKLIST.md`.
 
 **References:** GitHub (2026), *Quickstart for securing your repository* https://docs.github.com/en/code-security/getting-started/quickstart-for-securing-your-repository ; GitHub (2026), *Private vulnerability reporting* https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/configure-for-a-repository ; PDPC (2022), *Advisory Guidelines on Key Concepts* https://www.pdpc.gov.sg/ . See `SOURCES.md`.
+
+## T01 evidence boundary
+
+CONTRACT.md separates strict structural validation from semantic date/reference/duplicate/excerpt checks. Literal substring matching does not prove that a date or cancellation is true, nor authenticate its source. All results stay drafts. Bounded source bodies are input data, never executable instructions; do not echo full bodies to reports or errors.

@@ -1,8 +1,9 @@
 # DATABASE.md — Data Model and Backend Readiness
 
-> **Repository reconciliation, 1 November 2026 (SGT):** No database, application or migration exists at the inspected baseline. The transient schema remains provisional and needs the duplicate-candidate decision described in DISCOVERY.md. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
-**Decision:** NO DATABASE for v0.1. **Status:** PROPOSAL / no implementation. This file documents a logical, transient schema and future backend controls, rather than inventing deployed tables.
+
+**Decision:** NO DATABASE for v0.1. **Status:** Adopted no-database prototype design / no application implementation. This file documents a logical, transient schema and future backend controls, rather than inventing deployed tables.
 
 ## 1. v0.1 architecture
 
@@ -24,24 +25,15 @@ Student provides material to their chosen AI host; the skill instructs the model
 | Compliance | Minimise input, use synthetic fixtures, host disclosure | Data protection impact and DPO review |
 | AI | Host interpretation may be unreliable, deterministic validation | Model/version provenance, evaluation and abuse monitoring |
 
-## 2. Proposed logical records (not SQL tables)
+## 2. Canonical transient records
 
-**`Snapshot`**: `schema_version`, `snapshot_id` (non-PII), `scope` (`complete`/`partial`), `sources[]`, `records[]`, `created_at` (optional; never invent).
+Use CONTRACT.md and schemas/snapshot-v1.schema.json as the only normative definition. Source records include bounded full text, and each deadline excerpt must be an exact non-empty substring of its referenced source. Source identity is asserted, never authenticated by the schema.
 
-**`Source`**: `source_id`, `source_type` (`text`/`notice`/`brief`/`other`), `label`, `observed_at` (nullable), `effective_at` (nullable), `excerpt`/hash reference, `authority_confirmed_by_user` (boolean; default false). A user-supplied timestamp is not proof of origin.
+Match assessments by `(module_id, item_id)`. A snapshot may hold multiple source candidates for one assessment; `(module_id, item_id, source_id)` triples must be unique. Conflicting candidates are retained and never overwritten. No source rank or observed timestamp resolves authority.
 
-**`DeadlineRecord`**: `item_id`, `module_id`, `title`, `due_date` (ISO date), `due_time` (nullable), `timezone` (explicit offset or IANA zone if known), `time_precision` (`date`/`minute`), `source_id`, `source_excerpt`, `explicit_cancellation` (bool), `user_confirmed` (bool, default false). At least one valid source excerpt must substantiate a reported proposed date change.
+Use split date/time/offset fields. Date-only, timed-with-unknown-offset, unknown and cancellation forms have separate rules; cancellation has null due fields. Missing records do not imply removal, even in complete snapshots. Results are deterministic drafts only and confirmed_changes is always empty.
 
-**`ReconciliationResult`**: `item_id`, `module_id`, `status`, `before`, `candidates[]`, `source_references[]`, `explanation`, `requires_user_review`, `user_confirmed=false`.
-
-### Relationships and invariants
-
-- A snapshot contains zero or more sources and records; each record refers to a source in the same snapshot.
-- Record IDs are unique per module per snapshot; repeated identifiers across conflicting same-snapshot sources represent a candidate conflict, not an accidental overwrite.
-- A partial snapshot does not prove removal.
-- An exact time requires a valid date, timezone and precision; no assumed `+08:00` solely from company location.
-- The structured output is provisional until confirmed; once exported, no original files are modified.
-- Source excerpts are retained solely in user-controlled artefacts; do not put real excerpts in public fixtures.
+There are no SQL tables, migrations or central storage. JSON Schema covers structure; CONTRACT.md lists the semantic checks future code must enforce.
 
 ## 3. Hypothetical hosted schema (NOT APPROVED)
 

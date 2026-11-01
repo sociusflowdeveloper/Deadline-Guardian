@@ -62,3 +62,7 @@ Because different AI hosts may process data internationally, users must review t
 ## Official references
 
 PDPC (2022), *Advisory Guidelines on Key Concepts in the PDPA*, https://www.pdpc.gov.sg/ . PDPC (2024), *Advisory Guidelines on the PDPA for Children's Personal Data in the Digital Environment*, https://www.pdpc.gov.sg/-/media/files/pdpc/pdf-files/advisory-guidelines/advisory-guidelines-on-the-pdpa-for-children%27s-personal-data-in-the-digital-environment_mar24.pdf . Apple (2026), *App Review Guidelines*, https://developer.apple.com/app-store/review/guidelines/ . Google (2026), *User Data policy*, https://support.google.com/googleplay/android-developer/answer/10144311 . These app-store rules matter if a native app is subsequently built; this skill is not such an app.
+
+## Prototype contract clarification (draft)
+
+DG-DEC-001 adopts a local JSON contract that includes bounded source text alongside extracted records so the future helper can check literal excerpts. Source text can contain personal data and should be minimised before supply. Full source bodies are not intended to be copied into draft result files. This design is not implemented or tested here; it creates no live privacy promise or change to independent host retention.

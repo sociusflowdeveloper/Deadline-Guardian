@@ -10,7 +10,7 @@
 
 | Data category | Collection / processor in proposed v0.1 | Purpose | Proposed storage and retention | Deletion path | Status |
 |---|---|---|---|---|---|
-| Pasted academic source text | User's chosen AI host; local helper receives extracted JSON only | Interpret candidate deadlines | No SociusFlow-server storage; host retention per provider | Host controls + discard local copy | DESIGN ONLY |
+| Pasted academic source text | User's chosen AI host; local helper receives JSON containing bounded source text and extracted records | Interpret candidate deadlines and validate literal excerpt traceability | No SociusFlow-server storage; host retention per provider | Host controls + discard local copy | DESIGN ONLY |
 | Uploaded briefs/PDF/images | Not accepted by helper; optional chosen host capability | Host may read for extraction | No skill-operated retention; host policy applies | Host controls | OUT OF SCOPE for validated input |
 | Module/assessment titles | In-memory/local, potentially host | Compare records | In memory during process; saved local artefacts until deleted by user | Close process/delete local files | DESIGN ONLY |
 | Due date/time/timezone | In-memory/local, potentially host | Detect change/conflict | Same as above | Same as above | DESIGN ONLY |
@@ -40,7 +40,7 @@ Student source material
        │
        ▼
 Chosen AI host (independent controller/processor assessment required)
-       │ extracted candidate JSON
+       │ candidate JSON including bounded source text
        ▼
 User-controlled local input → offline validator and comparator → local report
                                                   │
@@ -70,3 +70,7 @@ Data minimisation at intake; deterministic validation; no hidden logging; source
 - [ ] Any new personal-data category added to this register before collection.
 
 **Legal reference:** PDPC, *Advisory Guidelines on Key Concepts in the PDPA*, particularly retention limitation and protection obligations: https://www.pdpc.gov.sg/ . Retention periods in this file are project proposals, **not statutory defaults**.
+
+## T01 data-map refinement
+
+The adopted contract includes each supplied source extract as `source.text` (up to 16,000 characters) to check that record excerpts are literal substrings. The helper therefore processes this bounded text locally as well as extracted fields. This is internal quote consistency, not proof of authenticity or semantic correctness. Full source bodies must not be copied into generated reports; reports include only the required excerpts/references. All current fixtures are fictional; real-data processing controls are not yet implemented or verified.

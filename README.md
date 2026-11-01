@@ -1,6 +1,7 @@
 # Deadline Guardian — Academic Deadline Drift Guard
 
-> **Repository reconciliation, 1 November 2026 (SGT):** Documentation has been extracted for review. No runnable tool or installable skill exists. Start with DISCOVERY.md, then obtain a recorded contract decision before application coding. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
+
 
 **Publisher (proposed):** SociusFlow Pte. Ltd.  
 **Status:** DOCUMENTATION DRAFT / NOT IMPLEMENTED / NOT CLEARED FOR PUBLIC RELEASE  
@@ -41,14 +42,14 @@ These files are **pre-repository planning, risk, API and legal drafts** prepared
 
 There is **no authorised automatic calendar update, AI model API key, company database, telemetry, account or paid feature** in the MVP proposal. Users of a third-party AI host are subject to that host's own privacy and subscription practices.
 
-## How to proceed (not completed)
+## Implementation sequence
 
-1. Approve or revise discovery answers in `SPEC.md` (D01–D16); validate demand with five student interviews.
-2. Authorise one ticket at a time in `TICKETS.md`; start a fresh agent on each.
-3. Require tests, plan-versus-code inspection, independent review, rights checks and a documented release decision.
-4. Only after approval publish the skill/package using a verified licence and install guide.
+1. Use the adopted T00 prototype decision in DECISIONS.md; demand validation remains open.
+2. Use the independently reviewed T01 schema/semantic contract.
+3. Start T02 local validator in a fresh ticket-limited context, followed by comparator and exporter tickets.
+4. Require actual tests, independent review, rights/privacy checks and a separate MD decision before a public product release.
 
-**Current disposition:** NO-GO public release, conditional GO for discovery/review. **This package has no code to execute.**
+**Current disposition:** GO for constrained fictional-data prototype work; NO-GO for public product release. No application code exists yet.
 
 ## Current engineering entry points
 
@@ -57,3 +58,7 @@ There is **no authorised automatic calendar update, AI model API key, company da
 - [CODEX_HANDOFF.md](CODEX_HANDOFF.md): bounded multi-step execution prompt for the next coding session.
 
 The original `SociusFlow_Deadline_Drift_Guard_Pre_Repo_Pack.zip` is retained as an immutable historical source. Root Markdown files are the maintained working copies; do not edit the ZIP to pretend earlier decisions changed.
+
+## Current prototype decision
+
+The user has authorised resolving T00/T01 here. [DECISIONS.md](DECISIONS.md) records the adopted prototype choices and unvalidated-demand assumptions. [CONTRACT.md](CONTRACT.md), [schemas](schemas/snapshot-v1.schema.json) and [fictional cases](examples/contract-cases.json) freeze the T01 contract. [T01 technical acceptance](T01_VERIFICATION.md) is recorded; T02 validator implementation is next. No runnable CLI, host compatibility or release approval is claimed.

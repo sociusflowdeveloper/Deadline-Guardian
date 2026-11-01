@@ -1,11 +1,12 @@
 # AGENTS.md — Repository Instructions for Coding Agents
 
-> **Repository reconciliation, 1 November 2026 (SGT):** Bootstrap documentation edits are authorised by the current repository-work request. T00 discovery and T01 schema approval remain prerequisites to application code. Preserve the existing LICENSE and source ZIP. Never infer approval from public visibility. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
-**Read this file before editing. Current repository state: documentation-only proposal; no implementation or approval is implied.**
+
+**Read this file before editing. Current state: prototype decisions and T01 contract artefacts; no application implementation or product release.**
 
 1. Read, in order: `SPEC.md`, `SECURITY.md`, `CODE_STYLE.md`, `DATABASE.md`, `API_GUIDE.md`, `DATA.md`, `TICKETS.md`, `AI_WORKING_RULES.md`.
-2. Do not write application code before T00 discovery decisions and T01 schema approval. Do not treat provisional assumptions as signed-off decisions.
+2. Use DG-DEC-001 for the delegated T00 prototype decision and the canonical T01 contract. Follow the recorded independent contract review/verification outcome before T02. Interview validation remains open and cannot be labelled passed.
 3. Operate on exactly **one authorised ticket per fresh agent session**, branch and PR. No ticket = no code changes.
 4. Never change a requirement by changing code. Submit a SPEC/ADR revision for decision first.
 5. Default to the Python standard library, offline comparison, user-supplied local files, no hosted accounts, no network and no paid services.

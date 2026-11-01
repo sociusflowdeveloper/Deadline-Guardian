@@ -1,9 +1,11 @@
 # T00 discovery and T01 decision pack
 
-**State:** IN PROGRESS, not accepted. **Date:** 1 November 2026 (SGT).
+> **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
+
+**State:** Prototype discovery decisions adopted under DG-DEC-001; empirical interviews remain OPEN. **Date:** 1 November 2026 (SGT).
 **Owner:** Managing Director for decisions; CMO for research; CTO for contract review.
 
-This is preparation for T00, not five completed interviews or schema approval. No real student data is needed in repository records. Use anonymous participant codes and summarised opt-in responses; never upload actual briefs or contact details.
+This document retains the interview kit and original questions. DECISIONS.md now records the resolved T00 prototype choices and CONTRACT.md freezes T01; no five completed interviews are claimed. No real student data is needed in repository records. Use anonymous participant codes and summarised opt-in responses; never upload actual briefs or contact details.
 
 ## Five-user interview kit
 
@@ -27,7 +29,7 @@ Existing acceptance criterion: at least three of five report meaningful pain, ot
 
 ## D01–D16 decision register
 
-All recommended answers below are PROPOSALS. Acceptance requires a dated decision-owner record; blanks do not imply approval.
+The original provisional table below is retained as historical preparation, not the current state. DECISIONS.md is the dated current decision record for every ID. No PENDING label in this historical table overrules that record.
 
 | ID | Proposed treatment | Required evidence / decision | Current state |
 |---|---|---|---|
@@ -50,7 +52,7 @@ All recommended answers below are PROPOSALS. Acceptance requires a dated decisio
 
 Decision record template: ID; accepted/rejected/revised answer; evidence; approver; date SGT; affected SPEC/ADR revision. Discovery evidence and release authority remain separate. Any explicit acceptance of unvalidated assumptions must be recorded as such and must not be reported as validated demand.
 
-## Contract conflicts to resolve in T01
+## Original contract conflicts, resolved by CONTRACT.md
 
 | Topic | Existing conflict or omission | Proposed resolution for CTO/MD review |
 |---|---|---|
@@ -64,8 +66,8 @@ Decision record template: ID; accepted/rejected/revised answer; evidence; approv
 | Missing prior record | Partial versus complete snapshot removal not fully specified | Missing is UNVERIFIED in either scope unless explicit cancellation evidence exists |
 | Paths | Explicit path selection versus workspace isolation lacks a root contract | Require a documented workspace root and safe no-overwrite rules; specify symlink handling |
 
-T01 deliverables after decisions: reviewed schema, status decision table and at least 12 fictional fixtures covering all six statuses, contradictory candidates, partial absence, invalid dates, ambiguous timezone, duplicated identity, cancellation and hostile source text. These are requirements, not created fixtures or passing tests.
+T01 now provides two schemas, the status decision table in CONTRACT.md and fictional cases in examples/contract-cases.json. They cover all six statuses, contradictory candidates, partial absence, invalid dates, ambiguous timezone, duplicated identity, cancellation and hostile source text. See the executed T01 verification record for the final case count and precise check boundary; these are not application tests.
 
 ## Next acceptance boundary
 
-Before T02: record T00 outcome, accepted D01–D16 answers or explicitly accepted assumptions, approved T01 schema/version and one authorised ticket. Review T00 when actual interview records or a recorded management decision arrive. No deadline for participants or founder assignment has been communicated by this document.
+DG-DEC-001 records T00 prototype treatments without claiming market validation. T01 semantics and schemas are authoritative in CONTRACT.md and schemas/. T02 requires the recorded independent T01 review/check outcome and a fresh ticket-limited implementation context. Review empirical T00 when interviews arrive; no participant deadline or founder assignment has been communicated.

@@ -33,3 +33,7 @@
 - Names of platforms are descriptive and do not signify affiliation, certification or endorsement.
 - Public web searches of the working product name are non-exhaustive; no trade-mark clearance has been completed. `IP.md` controls release.
 - No implementation, test, production deployment, privacy audit or board/management approval is represented as complete.
+
+## Fresh T00 primary-source update
+
+Reviewed 1 November 2026 (SGT): the repository READMEs at https://github.com/wyc79/calendar-creator-skill, https://github.com/Dsmx1119/Syllabus-Extractor and https://github.com/ZKey-Taken/syllabus-to-calendar. Observations and limits are recorded in DECISIONS.md. These are first-party documented feature claims, not runtime tests, evidence of adoption, a comprehensive competitor survey or demand validation. All other inherited references above retain their existing verification caveat.

@@ -1,8 +1,9 @@
 # ARCHITECTURE_DECISIONS.md — Technical Decision Register
 
-> **Repository reconciliation, 1 November 2026 (SGT):** The repository exists and is public; this is an observed state, not an approved product release. The no-backend design remains a proposal. See BOOTSTRAP.md for immutable baseline evidence. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
-**Version:** 0.1 draft, 1 November 2026 (SGT). All decisions are **PROPOSALS pending owner approval**. No technical system has been deployed.
+
+**Version:** 0.1 draft, 1 November 2026 (SGT). ADR-001–009 below are the historical proposal ledger; ADR-010 and DG-DEC-001 record the current adopted prototype choices and remaining release gates. No technical system has been deployed.
 
 | ID | Proposed decision | Alternatives rejected for v0.1 | Consequence / reopening trigger | Status |
 |---|---|---|---|---|
@@ -40,3 +41,7 @@ Before release: revert the PR without modifying production systems. After public
 ## B00 repository reconciliation (implemented documentation change)
 
 Keep `sociusflowdeveloper/Deadline-Guardian` as the exact target, maintain extracted documents at its root, retain the existing ZIP/LICENSE/.gitignore, and keep code work behind T00/T01. This records the user-authorised bootstrap scope, not acceptance of ADR-001–009. No service or paid dependency is added.
+
+## ADR-010 — Prototype decision and canonical T01 contract
+
+Adopt DG-DEC-001 under the user's direction to resolve T00/T01 here. Proceed offline using fictional data despite unvalidated demand; retain five adult interviews as a gate before wider investment/public product launch. T01 uses strict versioned snapshot/result schemas plus separately specified semantic validation, explicit source text and excerpts, numeric offsets, stable assessment identity, conservative conflicts and draft-only output. CONTRACT.md is normative. No network, storage, dependency, spending, licence or release authority is added. Reopen on a schema change, misleading deadline result or adverse user research.

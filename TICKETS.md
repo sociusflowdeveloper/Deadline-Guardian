@@ -1,15 +1,16 @@
 # TICKETS.md — Single-Agent Work Packages
 
-> **Repository reconciliation, 1 November 2026 (SGT):** B00 documentation bootstrap is in progress. T00 preparation has started with an interview kit and decision register; T00 is not passed. T01 and implementation tickets retain their dependencies. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
-**Status:** T00–T09 remain an unaccepted product backlog. B00 documentation bootstrap is implemented locally; T00 preparation is in progress. No product ticket is accepted, tested or closed.  
+
+**Status:** B00 documentation is in draft PR #1. T00 prototype choices are adopted under DG-DEC-001; interview validation remains open. T01 contract artefacts are technically accepted after independent review; see T01_VERIFICATION.md. No application or product release is claimed.  
 **Sequence:** T00 → T01 → T02 → T03 → T04 → T05 → T06 → T07 → T08 → T09. Parallelise only independent, read-only reviews; do not create conflicting branches.
 
 **Universal ticket contract:** A **fresh agent** is assigned one ticket and only its exact scope. It must read `SPEC.md`, `SECURITY.md`, `CODE_STYLE.md` and `AGENTS.md`; create one PR; report changed files, exact commands/results, actual current commit and any deviations. Compare code against the plan after each ticket. Changes to requirements must go through a proposed SPEC/ADR revision approved before code. At least one *different* independent review agent inspects proactive loops; an authorised human approves merges and release. A failing or unverified check blocks completion.
 
 | Ticket | Priority | Owner (proposed) | Dependency | Deliverable | Acceptance / done condition |
 |---|---|---|---|---|---|
-| T00 — Validate problem | P1 | MD + CMO | None | Five redacted user interview records, competitor update, answered D01–D16 | ≥3/5 report meaningful pain or document stop/pivot; decisions recorded |
+| T00 — Validate problem | P1 | MD + CMO | None | Recorded D01–D16 prototype decisions and competitor update; five interviews retained for wider investment/launch | Prototype decision adopted under explicit unvalidated assumptions; empirical validation separately OPEN |
 | T01 — Freeze contract | P1 | CTO | T00 | Approved JSON schema v1, statuses, matching rules, 12+ fictional fixtures | Duplicate/ambiguous/partial/cancellation rules reviewed; no code |
 | T02 — Build validator | P1 | Fresh engineering agent | T01 | Local CLI validation and schema errors | Invalid date, oversized input, paths fail closed; no network, no secrets |
 | T03 — Build comparator | P1 | New engineering agent | T02 | Pure deterministic change engine | Six statuses correct on fixture set; no silent authority selection |
@@ -50,6 +51,7 @@ Raise issue with `reason`, `new requirement`, `risk`, `cost/effort`, `affected d
 | Ticket | State | Evidence / remaining work |
 |---|---|---|
 | B00 — Extract and reconcile repository documents | IMPLEMENTED locally, review pending | Root documentation, BOOTSTRAP.md, DISCOVERY.md and CODEX_HANDOFF.md; no application code |
-| T00 — Validate problem | IN PROGRESS, interview evidence absent | Interview kit and D01–D16 register prepared; five actual interviews and decision-owner answers outstanding |
-| T01 — Freeze contract | BLOCKED by T00 and schema decisions | Contract conflicts documented in DISCOVERY.md; no approved schema or fixtures claimed |
-| T02–T09 | BLOCKED by prerequisites | No implementation, security tests, host tests or release approval claimed |
+| T00 — Prototype decision | Adopted under DG-DEC-001; empirical validation OPEN | D01–D16 resolved; three primary competitor READMEs checked; interviews not performed |
+| T01 — Freeze contract | Technically accepted for constrained prototype; PR merge pending | Canonical semantics, two schemas and fictional cases; no application execution claimed |
+| T02 | Ready for a fresh implementation context | Fresh validator context; approved contract only, no comparator/export scope |
+| T03–T09 | Dependent on earlier implementation and release gates | No security tests, host tests or release approval claimed |
