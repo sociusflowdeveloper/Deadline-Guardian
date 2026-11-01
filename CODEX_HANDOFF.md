@@ -20,3 +20,7 @@ Work only in sociusflowdeveloper/Deadline-Guardian. Use British English and Asia
 ```
 
 T03 comparator, T04 exporter and T05 skill authoring require their own later sessions and prerequisites. No custom skill is created or installed by this bootstrap.
+
+## Current hand-off after T02
+
+T02 now has implemented input validation and its own verification record. The T02 prompt above is retained for traceability, not a direction to rebuild completed code. The next fresh implementation context is T03 only: deterministic comparison against CONTRACT.md and the expected six-status fixtures, preserving validation/path controls and draft-only output. Do not add exports, a SKILL.md, network access or calendar writes in T03.

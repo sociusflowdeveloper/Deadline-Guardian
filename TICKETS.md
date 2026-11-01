@@ -3,7 +3,7 @@
 > **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
 
-**Status:** B00 documentation is in draft PR #1. T00 prototype choices are adopted under DG-DEC-001; interview validation remains open. T01 contract artefacts are technically accepted after independent review; see T01_VERIFICATION.md. No application or product release is claimed.  
+**Status:** B00 and T00/T01 documentation merged through PR #1 at f2b2929f8c11b9c8d6dcef91987cf92d5a7e3226. T00 prototype choices are adopted under DG-DEC-001; interview validation remains open. T01 contract artefacts are technically accepted after independent review; see T01_VERIFICATION.md. No comparator, exporter or product release is claimed.
 **Sequence:** T00 → T01 → T02 → T03 → T04 → T05 → T06 → T07 → T08 → T09. Parallelise only independent, read-only reviews; do not create conflicting branches.
 
 **Universal ticket contract:** A **fresh agent** is assigned one ticket and only its exact scope. It must read `SPEC.md`, `SECURITY.md`, `CODE_STYLE.md` and `AGENTS.md`; create one PR; report changed files, exact commands/results, actual current commit and any deviations. Compare code against the plan after each ticket. Changes to requirements must go through a proposed SPEC/ADR revision approved before code. At least one *different* independent review agent inspects proactive loops; an authorised human approves merges and release. A failing or unverified check blocks completion.
@@ -50,8 +50,8 @@ Raise issue with `reason`, `new requirement`, `risk`, `cost/effort`, `affected d
 
 | Ticket | State | Evidence / remaining work |
 |---|---|---|
-| B00 — Extract and reconcile repository documents | IMPLEMENTED locally, review pending | Root documentation, BOOTSTRAP.md, DISCOVERY.md and CODEX_HANDOFF.md; no application code |
+| B00 — Extract and reconcile repository documents | MERGED and documentation verified via PR #1 | Root documentation, BOOTSTRAP.md, DISCOVERY.md and CODEX_HANDOFF.md; no application code |
 | T00 — Prototype decision | Adopted under DG-DEC-001; empirical validation OPEN | D01–D16 resolved; three primary competitor READMEs checked; interviews not performed |
 | T01 — Freeze contract | Technically accepted for constrained prototype; PR merge pending | Canonical semantics, two schemas and fictional cases; no application execution claimed |
-| T02 | Ready for a fresh implementation context | Fresh validator context; approved contract only, no comparator/export scope |
+| T02 | IMPLEMENTED; independent review and CI evidence recorded with its PR | Strict validator, workspace confinement, tests and safe CLI; see T02_VERIFICATION.md |
 | T03–T09 | Dependent on earlier implementation and release gates | No security tests, host tests or release approval claimed |

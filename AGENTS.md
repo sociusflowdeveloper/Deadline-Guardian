@@ -3,7 +3,7 @@
 > **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
 
-**Read this file before editing. Current state: prototype decisions and T01 contract artefacts; no application implementation or product release.**
+**Read this file before editing. Current state: T02 validation-only CLI and regression tests implemented; no comparator, exporter, installable skill or product release.**
 
 1. Read, in order: `SPEC.md`, `SECURITY.md`, `CODE_STYLE.md`, `DATABASE.md`, `API_GUIDE.md`, `DATA.md`, `TICKETS.md`, `AI_WORKING_RULES.md`.
 2. Use DG-DEC-001 for the delegated T00 prototype decision and the canonical T01 contract. Follow the recorded independent contract review/verification outcome before T02. Interview validation remains open and cannot be labelled passed.

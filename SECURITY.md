@@ -1,6 +1,6 @@
 # SECURITY.md — Security Policy and Threat Model
 
-> **Repository reconciliation, 1 November 2026 (SGT):** This public repository exists; private vulnerability reporting and security settings have not been inspected. No executable security controls have been tested. Do not claim a security audit from document review. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Repository reconciliation, 1 November 2026 (SGT):** This public repository exists; private vulnerability reporting and security settings have not been inspected. T02 has focused input/path/error regression tests. This is not a full security audit or a review of future comparator/export/host behaviour. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
 
 **Status:** PROPOSAL / not implemented or assessed | **v0.1** | 1 November 2026, SGT  
 **Scope:** Public code repository and user-operated Agent Skill; no SociusFlow-hosted backend in v0.1.
@@ -82,3 +82,7 @@ One fresh agent per ticket; one independent technical/security agent review for 
 ## T01 evidence boundary
 
 CONTRACT.md separates strict structural validation from semantic date/reference/duplicate/excerpt checks. Literal substring matching does not prove that a date or cancellation is true, nor authenticate its source. All results stay drafts. Bounded source bodies are input data, never executable instructions; do not echo full bodies to reports or errors.
+
+## T02 implementation evidence boundary
+
+The validator uses bounded strict JSON decoding, schema/semantic checks and descriptor-relative POSIX reads, rejects symlink/non-regular inputs and detects the tested rename/replacement races. Tests exercise hostile source text as data and redacted errors. This is focused evidence only: comparison, export sanitisation, host behaviour, full Git history, external security settings and a complete security assessment remain later gates. Unsupported filesystem primitives fail closed rather than falling back to unsafe path reads.

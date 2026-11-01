@@ -1,6 +1,6 @@
 # DATA.md — Data Inventory and Retention Schedule
 
-> **Repository reconciliation, 1 November 2026 (SGT):** Only repository documents have been inspected. No helper runs or user-data processing controls have been verified. Public GitHub distribution already applies to the original ZIP; retention proposals remain unapproved. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Repository reconciliation, 1 November 2026 (SGT):** T02 validator runs use fictional inputs only; input bounds, error redaction and no-output-file behaviour have focused tests. No real-user processing, provider retention or operator deletion process is verified. Public GitHub distribution already applies to the original ZIP; retention proposals remain unapproved. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
 
 **Status:** PROPOSED data map, not verified against deployed software (none implemented).  
 **Scope:** Academic Deadline Drift Guard v0.1 plus separately identified optional project communications.  

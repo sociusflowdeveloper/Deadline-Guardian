@@ -3,7 +3,7 @@
 > **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
 
-**Decision:** NO DATABASE for v0.1. **Status:** Adopted no-database prototype design / no application implementation. This file documents a logical, transient schema and future backend controls, rather than inventing deployed tables.
+**Decision:** NO DATABASE for v0.1. **Status:** Adopted no-database prototype design; local validation implemented, no persistence. This file documents a logical, transient schema and future backend controls, rather than inventing deployed tables.
 
 ## 1. v0.1 architecture
 
