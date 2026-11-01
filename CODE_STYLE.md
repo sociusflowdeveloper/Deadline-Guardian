@@ -6,6 +6,8 @@
 
 ## 1. Principles
 
+Follow [LANGUAGE_POLICY.md](LANGUAGE_POLICY.md) for the preferred language/format allowlist and exception process. Python is the sole application language for this prototype. Keep changes relevant: no unused imports, dead code, duplicate implementations, unnecessary dependencies or speculative scaffolding. This is a review requirement, not a claim that an automated lint gate exists.
+
 - Prefer the smallest deterministic, auditable implementation that satisfies `SPEC.md`.
 - Keep **extraction/interpretation** separate from **validation** and **comparison**. The model may propose records, but the Python comparator is the authoritative algorithm for status labels.
 - No external package dependency, remote API, cloud SDK, database, environment secret, telemetry or hidden state in v0.1.

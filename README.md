@@ -77,3 +77,7 @@ python skills/academic-deadline-drift-guard/scripts/reconcile.py \
 Expected: `VALIDATED_INPUTS: review required; comparison not yet implemented.` Exit 0 means input validation only, not a resolved deadline. The command does not generate a report, save output, compare dates or change a calendar yet.
 
 Run regression checks with `python -m unittest discover -s tests -v`. See [T02_VERIFICATION.md](T02_VERIFICATION.md) for actual results, capability skips and review limits.
+
+## Language and code hygiene
+
+Follow [LANGUAGE_POLICY.md](LANGUAGE_POLICY.md): Python for application/tests, JSON for contracts/data, Markdown for documentation and YAML for CI; short fixed shell commands only for CI glue. Keep only relevant code and dependencies. Additional languages, runtimes or frameworks require an approved need and ADR.
