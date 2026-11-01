@@ -3,7 +3,7 @@
 > **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
 
-**Read this file before editing. Current state: T02 validation-only CLI and regression tests implemented; no comparator, exporter, installable skill or product release.**
+**Read this file before editing. Current state: T03 comparator and validation CLI implemented on this branch; no exporter, installable skill or product release. See VERSION_LOG.md and COMPLETENESS.md for evidence and outstanding gates.**
 
 1. Read, in order: `SPEC.md`, `SECURITY.md`, `CODE_STYLE.md`, `DATABASE.md`, `API_GUIDE.md`, `DATA.md`, `TICKETS.md`, `AI_WORKING_RULES.md`.
 2. Use DG-DEC-001 for the delegated T00 prototype decision and the canonical T01 contract. Follow the recorded independent contract review/verification outcome before T02. Interview validation remains open and cannot be labelled passed.
@@ -19,3 +19,9 @@
 12. Stop upon ticket PASS, FAIL or BLOCKED. Never deploy, publish, email or incur spend merely because a tool is available.
 
 **Required hand-off:** ticket ID; approved SPEC version; changed file list; test commands/results; threat review; code-plan comparison; reviewer; blockers; rollback.
+
+## Mandatory version and hand-off discipline
+
+Update `VERSION_LOG.md` in **every change-bearing PR**, including code, tests, CI, documentation, policy and corrective changes. Keep one entry per coherent change set; update that entry when revising the same PR. Record Asia/Singapore date, ticket, prototype/product version, concrete changes, actual verification, review/merge/release state, outstanding gates and rollback. Record failures and unrun checks explicitly. Never invent historical versions, signatures, approvals or test results; retain old entries and label corrections.
+
+Update `COMPLETENESS.md` whenever delivered scope or verification changes. Reconcile current README, API and ticket status in the same PR. Keep historical verification records and the source ZIP immutable; label prototype versions separately from approved releases. PR reviewers must block a change missing its version-log update. This is a documented review rule, not a claim of automated enforcement.
