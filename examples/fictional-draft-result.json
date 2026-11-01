@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "result_status": "REVIEW_REQUIRED",
+  "before_snapshot_id": "old",
+  "after_snapshot_id": "new",
+  "changes": [
+    {
+      "module_id": "MKT101",
+      "item_id": "report",
+      "status": "CHANGED",
+      "reason_code": "VALUE_CHANGED",
+      "before": [
+        {
+          "item_id": "report",
+          "module_id": "MKT101",
+          "title": "Fictional report",
+          "due_date": "2026-11-12",
+          "due_time": "17:00",
+          "timezone": "+08:00",
+          "time_precision": "minute",
+          "source_id": "old",
+          "source_excerpt": "Fictional report due 2026-11-12 at 17:00 +08:00.",
+          "explicit_cancellation": false,
+          "user_confirmed": false
+        }
+      ],
+      "candidates": [
+        {
+          "item_id": "report",
+          "module_id": "MKT101",
+          "title": "Fictional report",
+          "due_date": "2026-11-14",
+          "due_time": "17:00",
+          "timezone": "+08:00",
+          "time_precision": "minute",
+          "source_id": "notice",
+          "source_excerpt": "Fictional report due 2026-11-14 at 17:00 +08:00.",
+          "explicit_cancellation": false,
+          "user_confirmed": false
+        }
+      ],
+      "source_references": [
+        {
+          "side": "after",
+          "source_id": "notice",
+          "source_excerpt": "Fictional report due 2026-11-14 at 17:00 +08:00."
+        },
+        {
+          "side": "before",
+          "source_id": "old",
+          "source_excerpt": "Fictional report due 2026-11-12 at 17:00 +08:00."
+        }
+      ],
+      "requires_user_review": true,
+      "user_confirmed": false
+    }
+  ],
+  "confirmed_changes": []
+}

@@ -218,3 +218,36 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Deadline Guardian: original pack safeguards (existing rules preserved)
+*.py[cod]
+coverage/
+.venv/
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*credentials*.json
+*secret*.json
+local-data/
+private-data/
+real-fixtures/
+user-input/
+user-output/
+exports/
+*.local.json
+*.private.json
+*.student.json
+*.student.csv
+.tmp/
+tmp/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo

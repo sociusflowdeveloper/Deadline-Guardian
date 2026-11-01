@@ -1,0 +1,286 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Deadline Guardian snapshot v1",
+  "description": "Structural contract only. See CONTRACT.md for mandatory semantic validation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "snapshot_id",
+    "scope",
+    "sources",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "snapshot_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*(?![\\s\\S])"
+    },
+    "scope": {
+      "enum": [
+        "complete",
+        "partial"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "records": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_type",
+        "label",
+        "text",
+        "authority_confirmed_by_user"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*(?![\\s\\S])"
+        },
+        "source_type": {
+          "enum": [
+            "text",
+            "notice",
+            "brief",
+            "other"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]*(?![\\s\\S])"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16000,
+          "pattern": "^[^\\u0000-\\u0008\\u000b\\u000c\\u000e-\\u001f\\u007f]*(?![\\s\\S])"
+        },
+        "authority_confirmed_by_user": {
+          "const": false
+        }
+      }
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "item_id",
+        "module_id",
+        "title",
+        "due_date",
+        "due_time",
+        "timezone",
+        "time_precision",
+        "source_id",
+        "source_excerpt",
+        "explicit_cancellation",
+        "user_confirmed"
+      ],
+      "properties": {
+        "item_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*(?![\\s\\S])"
+        },
+        "module_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*(?![\\s\\S])"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]*(?![\\s\\S])"
+        },
+        "due_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])(?![\\s\\S])"
+        },
+        "due_time": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9](?![\\s\\S])"
+        },
+        "timezone": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:\\+00:00|[+-](?:(?:0[0-9]|1[0-3]):[0-5][0-9]|14:00))(?![\\s\\S])",
+          "not": {
+            "const": "-00:00"
+          }
+        },
+        "time_precision": {
+          "enum": [
+            "date",
+            "minute",
+            "unknown",
+            "none"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*(?![\\s\\S])"
+        },
+        "source_excerpt": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "pattern": "^[^\\u0000-\\u0008\\u000b\\u000c\\u000e-\\u001f\\u007f]*(?![\\s\\S])"
+        },
+        "explicit_cancellation": {
+          "type": "boolean"
+        },
+        "user_confirmed": {
+          "const": false
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "explicit_cancellation": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "time_precision": {
+                "const": "none"
+              },
+              "due_date": {
+                "type": "null"
+              },
+              "due_time": {
+                "type": "null"
+              },
+              "timezone": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "explicit_cancellation": {
+                "const": false
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "time_precision": {
+                "enum": [
+                  "date",
+                  "minute",
+                  "unknown"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "time_precision": {
+                "const": "date"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "due_date": {
+                "type": "string"
+              },
+              "due_time": {
+                "type": "null"
+              },
+              "timezone": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "time_precision": {
+                "const": "minute"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "due_date": {
+                "type": "string"
+              },
+              "due_time": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "time_precision": {
+                "const": "unknown"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "due_date": {
+                "type": "null"
+              },
+              "due_time": {
+                "type": "null"
+              },
+              "timezone": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

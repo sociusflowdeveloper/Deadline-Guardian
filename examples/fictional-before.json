@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "old",
+  "scope": "partial",
+  "sources": [
+    {
+      "source_id": "old",
+      "source_type": "notice",
+      "label": "Fictional source",
+      "text": "Fictional report due 2026-11-12 at 17:00 +08:00.",
+      "authority_confirmed_by_user": false
+    }
+  ],
+  "records": [
+    {
+      "item_id": "report",
+      "module_id": "MKT101",
+      "title": "Fictional report",
+      "due_date": "2026-11-12",
+      "due_time": "17:00",
+      "timezone": "+08:00",
+      "time_precision": "minute",
+      "source_id": "old",
+      "source_excerpt": "Fictional report due 2026-11-12 at 17:00 +08:00.",
+      "explicit_cancellation": false,
+      "user_confirmed": false
+    }
+  ]
+}
