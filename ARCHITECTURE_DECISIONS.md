@@ -45,3 +45,7 @@ Keep `sociusflowdeveloper/Deadline-Guardian` as the exact target, maintain extra
 ## ADR-010 — Prototype decision and canonical T01 contract
 
 Adopt DG-DEC-001 under the user's direction to resolve T00/T01 here. Proceed offline using fictional data despite unvalidated demand; retain five adult interviews as a gate before wider investment/public product launch. T01 uses strict versioned snapshot/result schemas plus separately specified semantic validation, explicit source text and excerpts, numeric offsets, stable assessment identity, conservative conflicts and draft-only output. CONTRACT.md is normative. No network, storage, dependency, spending, licence or release authority is added. Reopen on a schema change, misleading deadline result or adverse user research.
+
+## ADR-011 — Preferred languages and code hygiene
+
+**Adopted engineering instruction, 2 November 2026 SGT:** Implement the user's language-hygiene request through LANGUAGE_POLICY.md. Retain Python 3.11+ standard library as the sole application/test stack, JSON for contracts and fictional data, Markdown for documentation, YAML for CI and short fixed shell commands for CI glue. Reject gratuitous languages, runtimes, dependencies and duplicate/dead scaffolding. Exceptions require an unmet need and approved ADR/spec revision before implementation. This adds documentation/review criteria only; no automated scanner or new runtime is installed.
