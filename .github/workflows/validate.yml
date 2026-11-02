@@ -1,4 +1,4 @@
-name: Offline validator
+name: Offline prototype checks
 
 on:
   pull_request:
@@ -32,7 +32,9 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Run validation and trust-boundary tests
         run: python -m unittest discover -s tests -v
+      - name: Scan current source and available local history
+        run: python -B scripts/security_check.py --history
       - name: Compile Python source
-        run: python -m compileall -q skills/academic-deadline-drift-guard/scripts tests
+        run: python -m compileall -q skills/academic-deadline-drift-guard/scripts scripts tests
       - name: Check patch whitespace
         run: git diff --check HEAD^ HEAD

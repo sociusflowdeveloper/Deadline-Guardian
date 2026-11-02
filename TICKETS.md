@@ -57,4 +57,5 @@ Raise issue with `reason`, `new requirement`, `risk`, `cost/effort`, `affected d
 | T03 | IMPLEMENTED; PR #4 CI successful; human merge gate pending | Run 41325807541 for 8eb634b201026ecc0f5e0e19f7dcd1b7a816807e; see T03_VERIFICATION.md |
 | T04 | IMPLEMENTED; PR #5 CI successful; human merge gate pending | Run 41327827882 for d1a0f620f03a6b6bbaa388e3a38e9e1d9751e780; T04_VERIFICATION.md |
 | T05 | IMPLEMENTED repository skill package; PR/CI and approval tracked with its PR | T05_VERIFICATION.md; actual host invocation is T08, not claimed |
-| T06–T09 | Pending dependency and release gates | Independent full local security review, IP/host checks and release decision remain open |
+| T06 | Local package security checks/review recorded; PR CI/human gate separate | T06_SECURITY_REVIEW.md; scoped scans/tests, residual risks and limits |
+| T07–T09 | Pending dependency and release gates | IP/privacy clearance, actual host checks and release decision remain open |

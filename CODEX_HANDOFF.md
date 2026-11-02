@@ -33,6 +33,10 @@ T03 now provides deterministic comparison and draft JSON stdout on this branch. 
 
 T04 adds explicit local draft JSON/CSV/Markdown exports; VERSION_LOG.md and T04_VERIFICATION.md hold current evidence. T03 PR #4 CI succeeded and remains unmerged; review stacked changes separately and integrate in dependency order. Stop this session at the completed T04 implementation. The next coding ticket is T05 in a fresh context after prerequisite review/CI gates: canonical SKILL.md, safe triggers, fictional usage and honest host limitations. Use the skill-creator workflow before writing any skill. Do not claim host compatibility without actual T08 invocation evidence or release without T09 approval. Keep the version log and current scorecard updated in every change-bearing PR.
 
-## Current hand-off after T05 implementation
+## Historical hand-off after T05 implementation
 
 T05 adds the canonical repository skill and local packaging evidence; it does not install the skill into a personal profile or establish Claude/second-host compatibility. Read T05_VERIFICATION.md and the version log. The next fresh ticket is T06: independent security/threat checks for all local helper and skill surfaces, recorded scan limits, adversarial tests and a review report. No new host integration, account, network capability or release is authorised. Keep T07 rights/legal, T08 actual hosts and T09 release separate.
+
+## Current hand-off after T06 local evidence
+
+Stop this implementation session after the reviewed local package security milestone. Use T06_SECURITY_REVIEW.md for scope, actual results, findings and residual risks; use the stacked PRs for exact-commit CI. Do not turn a local technical assessment into host certification or release approval. The next required owners are MD/CMO for five adult-user interviews, MD/secretariat/DPO or qualified adviser for T07 rights/privacy clearance, separate authorised QA for real T08 host invocation, and MD for T09 exact-commit release decision. No person was appointed or approval manufactured by this hand-off. Merge dependency order and passing checks remain required.
