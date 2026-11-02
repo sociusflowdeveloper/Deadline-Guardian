@@ -86,3 +86,9 @@ CONTRACT.md separates strict structural validation from semantic date/reference/
 ## T02 implementation evidence boundary
 
 The validator uses bounded strict JSON decoding, schema/semantic checks and descriptor-relative POSIX reads, rejects symlink/non-regular inputs and detects the tested rename/replacement races. Tests exercise hostile source text as data and redacted errors. This is focused evidence only: comparison, export sanitisation, host behaviour, full Git history, external security settings and a complete security assessment remain later gates. Unsupported filesystem primitives fail closed rather than falling back to unsafe path reads.
+
+## T04 export trust boundary
+
+T04 adds a user-authorised write only when a new destination and format are explicitly provided. No default file persistence, account, network or calendar integration is introduced. Existing targets and unsafe output paths must fail closed. Publication must not expose a partial completed report or overwrite an existing path; transient staging is private and exclusive. See T04_VERIFICATION.md for actual implementation and reviewed checks; this is not the full T06 audit.
+
+CSV neutralises formula-leading content and uses field quoting; spreadsheet applications may alter imports/re-saves, so draft CSV is not an executable or trusted import contract. Markdown neutralises raw HTML and formatting/link syntax from untrusted evidence. Canonical JSON evidence is unchanged. Treat reports as untrusted data, never commands; inspect conflicts and unknowns. Error output must not expose content or user filenames. Cleanup failure or a crash may leave a private staging file; deletion is user-managed and secure erasure/provider deletion is not promised. Path checks cannot isolate code from a malicious operating system or privileged actor.

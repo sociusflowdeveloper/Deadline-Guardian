@@ -2,7 +2,7 @@
 
 > **Repository reconciliation, 1 November 2026 (SGT):** T02 validator runs use fictional inputs only; input bounds, error redaction and no-output-file behaviour have focused tests. No real-user processing, provider retention or operator deletion process is verified. Public GitHub distribution already applies to the original ZIP; retention proposals remain unapproved. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
 
-**Status:** PROPOSED data map, not verified against deployed software (none implemented).  
+**Status:** Local T02–T04 prototype code exists; the wider data/retention policy remains proposed, with no deployed service or real-user processing verified.
 **Scope:** Academic Deadline Drift Guard v0.1 plus separately identified optional project communications.  
 **Rule:** Every new data type, telemetry system, hosted storage area or third party requires a change to this table, the privacy notice, security review and approval **before use**.
 
@@ -15,9 +15,9 @@
 | Module/assessment titles | In-memory/local, potentially host | Compare records | In memory during process; saved local artefacts until deleted by user | Close process/delete local files | DESIGN ONLY |
 | Due date/time/timezone | In-memory/local, potentially host | Detect change/conflict | Same as above | Same as above | DESIGN ONLY |
 | Source ID, excerpt, provenance | In-memory/local, potentially host | Evidence for each proposed change | Same as above; redaction encouraged | Same as above | DESIGN ONLY |
-| Generated JSON/CSV/Markdown report | User-selected local destination | Review/export | Until user removes file; no automatic expiry in v0.1 | Delete output plus own backup copies | DESIGN ONLY |
+| Generated JSON/CSV/Markdown draft report | Explicit user-selected new local destination in workspace | Review/export | Until user removes file; no automatic expiry | Delete output plus own backup/synchronised copies | T04 IMPLEMENTED; fictional checks in T04_VERIFICATION.md |
 | Local process memory | Current user device only | Compute results | For process lifetime; operating system may use swap | End process; secure deletion cannot be guaranteed | DESIGN ONLY |
-| Local caches/temp files | **None intended** | None | Retention 0 by design | No cache should be generated | MUST TEST |
+| Local caches/temp files | No persistent cache; T04 uses private exclusive temporary staging in selected output directory | Publish complete draft without overwrite | Staging cleanup is attempted on success/handled failure; cleanup failure or abrupt termination can leave a staging file | User may remove leftover private staging files; no secure-erasure guarantee | T04 failure tests; abrupt termination recovery is user-managed |
 | SociusFlow user account/profile | None | None | Not collected | Not applicable | OUT OF SCOPE |
 | Passwords, authentication secrets | None | None | Not collected | Not applicable | FORBIDDEN |
 | IP address, exact device/location | Not gathered by helper | None | Not collected by skill | Not applicable; host/GitHub policies separate | OUT OF SCOPE |
@@ -74,3 +74,7 @@ Data minimisation at intake; deterministic validation; no hidden logging; source
 ## T01 data-map refinement
 
 The adopted contract includes each supplied source extract as `source.text` (up to 16,000 characters) to check that record excerpts are literal substrings. The helper therefore processes this bounded text locally as well as extracted fields. This is internal quote consistency, not proof of authenticity or semantic correctness. Full source bodies must not be copied into generated reports; reports include only the required excerpts/references. All current fixtures are fictional; real-data processing controls are not yet implemented or verified.
+
+## T04 local export refinement
+
+The user may explicitly persist draft reports under the workspace. Reports contain record titles, due fields and necessary evidence excerpts, never entire source bodies as additional fields. Keep exports out of public issues, CI and repositories. CSV/Markdown apply display sanitisation; JSON is the canonical exact-evidence representation. There is no operator backup, expiry job or hosted retention control. The implementation's private transient staging is part of the requested write, not telemetry or a retained cache. See T04_VERIFICATION.md for actual failure cleanup/race checks and limitations.

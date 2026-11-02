@@ -2,7 +2,7 @@
 
 **Date:** 1 November 2026 (Asia/Singapore). **Engineering disposition:** adopted for the constrained, fictional-data prototype under the user's instruction to work through T00 decisions and T01 schema approval here. This is a delegated engineering decision, not a fabricated human signature, validated-demand result, merged specification or product-release approval. Independent review and the parent decision record identify final acceptance.
 
-**Canonical files:** [snapshot schema](schemas/snapshot-v1.schema.json), [draft result schema](schemas/result-v1.schema.json), [fictional contract cases](examples/contract-cases.json). Schema dialect: JSON Schema 2020-12. These files define requirements. T02 implements snapshot validation and confined input reads; see T02_VERIFICATION.md for its evidence. T03 implements comparison on this branch; exporter remains unimplemented.
+**Canonical files:** [snapshot schema](schemas/snapshot-v1.schema.json), [draft result schema](schemas/result-v1.schema.json), [fictional contract cases](examples/contract-cases.json). Schema dialect: JSON Schema 2020-12. These files define requirements. T02 implements snapshot validation and confined input reads; see T02_VERIFICATION.md for its evidence. T03 implements comparison and T04 implements explicit local draft exports on this branch.
 
 ## 1. Scope and precedence
 
@@ -75,7 +75,7 @@ No confirmation file, accepted-source input, calendar `.ics`, final import or au
 
 Require an explicit user-selected existing workspace directory and relative `.json` input paths beneath it, using case-sensitive suffix `.json`. Reject absolute paths, `.`/`..` components, NUL, backslashes and every symlink component. Reject non-regular files and paths resolving outside that root. Use bounded reads; do not scan directories or read environment secrets. Open file descriptors safely and verify file identity to prevent symlink/rename races; lexical checks alone are insufficient. Platform support and negative tests must be demonstrated before claiming path confinement.
 
-The eventual `--workspace`, `--before`, `--after` interface has no default discovery directory. T02 implements validation of paths and files only, without output writes. T04 may introduce an explicit new output path under that workspace, no existing target, no input overwrite, exclusive creation and no unsafe temporary-file race; output failure leaves inputs unchanged. No export implementation is provided here.
+The eventual `--workspace`, `--before`, `--after` interface has no default discovery directory. T02 implements validation of paths and files only, without output writes. T04 may introduce an explicit new output path under that workspace, no existing target, no input overwrite, exclusive creation and no unsafe temporary-file race; output failure leaves inputs unchanged. T04 export implementation and its tests are recorded separately in T04_VERIFICATION.md; this contract remains the normative boundary.
 
 ## 7. Error priority and taxonomy
 

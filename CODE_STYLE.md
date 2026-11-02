@@ -1,8 +1,8 @@
 # CODE_STYLE.md — Engineering Standards
 
-> **Repository reconciliation, 1 November 2026 (SGT):** The initial baseline had no Python implementation. T02 adds validation and T03 adds deterministic comparison with draft JSON stdout, tests and CI configuration. T02_VERIFICATION.md and T03_VERIFICATION.md record executed checks. No file exporter or runtime dependency is added. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Repository reconciliation, 1 November 2026 (SGT):** The initial baseline had no Python implementation. T02 adds validation and T03 adds deterministic comparison with draft JSON stdout, tests and CI configuration. T02_VERIFICATION.md and T03_VERIFICATION.md record executed checks. T04 adds explicit draft file export; no runtime dependency is added. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
 
-**Status:** Engineering standards applied to T02 validator and T03 comparator; exporter and later tickets pending | **Runtime:** Python 3.11+ standard library | **Language:** British English for user-facing text.
+**Status:** Engineering standards applied to T02 validator, T03 comparator and T04 draft exporters; skill packaging and later tickets pending | **Runtime:** Python 3.11+ standard library | **Language:** British English for user-facing text.
 
 ## 1. Principles
 

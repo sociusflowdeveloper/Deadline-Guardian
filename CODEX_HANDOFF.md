@@ -25,6 +25,10 @@ T03 comparator, T04 exporter and T05 skill authoring require their own later ses
 
 T02 now has implemented input validation and its own verification record. The T02 prompt above is retained for traceability, not a direction to rebuild completed code. The next fresh implementation context is T03 only: deterministic comparison against CONTRACT.md and the expected six-status fixtures, preserving validation/path controls and draft-only output. Do not add exports, a SKILL.md, network access or calendar writes in T03.
 
-## Current hand-off after T03 implementation
+## Historical hand-off after T03 implementation
 
 T03 now provides deterministic comparison and draft JSON stdout on this branch. Use VERSION_LOG.md, COMPLETENESS.md and T03_VERIFICATION.md for current state; the earlier T02/T03 prompts above are historical. The next implementation ticket is T04, in a fresh context after T03 review/CI and authorised merge gates. Preserve contract v1.0. Implement explicit safe draft export only; test exclusive writes, workspace confinement, no input overwrite, formula-safe CSV and escaped Markdown. Update VERSION_LOG.md in the same PR and revise completeness only from evidence. Do not add SKILL.md, integrations or release claims.
+
+## Current hand-off after T04 implementation
+
+T04 adds explicit local draft JSON/CSV/Markdown exports; VERSION_LOG.md and T04_VERIFICATION.md hold current evidence. T03 PR #4 CI succeeded and remains unmerged; review stacked changes separately and integrate in dependency order. Stop this session at the completed T04 implementation. The next coding ticket is T05 in a fresh context after prerequisite review/CI gates: canonical SKILL.md, safe triggers, fictional usage and honest host limitations. Use the skill-creator workflow before writing any skill. Do not claim host compatibility without actual T08 invocation evidence or release without T09 approval. Keep the version log and current scorecard updated in every change-bearing PR.

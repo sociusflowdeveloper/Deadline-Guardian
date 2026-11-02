@@ -59,3 +59,7 @@ Before shipping account registration, add a discoverable authenticated **Delete 
 Apple's rules require apps supporting account creation to allow users to initiate deletion within the app; deactivation alone does not suffice. Google Play's rules for in-app account creation require a discoverable in-app deletion path and external web resource, with associated user data deletion subject to justified exceptions. **Neither rule creates a requirement to build a fictional account for a standalone GitHub Agent Skill.**
 
 **Sources:** Apple (2026), *Offering account deletion in your app*, https://developer.apple.com/support/offering-account-deletion-in-your-app/ ; Google (2026), *Understanding Google Play’s app account deletion requirements*, https://support.google.com/googleplay/android-developer/answer/13327111 ; PDPC (2022), *PDPA Key Concepts*, https://www.pdpc.gov.sg/ .
+
+## T04 local report lifecycle
+
+Explicit draft exports are now implemented on this branch. There is no automatic deletion command. Users control the requested output and any backups/synchronised copies; code rollback does not delete those files. T04 uses private transient staging for complete-file publication, attempts staging cleanup on completion/handled failures and never overwrites an existing destination. Cleanup failure, abrupt termination or hardware failure can leave a private staging file for the user to remove. None of this removes AI-provider conversations/uploads or guarantees secure erasure. See T04_VERIFICATION.md for tested cases and limits.
