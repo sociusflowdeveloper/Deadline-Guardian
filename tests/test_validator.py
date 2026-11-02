@@ -1,6 +1,6 @@
 """Contract-derived validation, local-file safety and privacy regression tests.
 
-All inputs are fictional. Expected comparison statuses are reserved for T03.
+All inputs are fictional. Comparison expectations are exercised in test_comparator.
 """
 
 from __future__ import annotations
@@ -417,8 +417,10 @@ class CliTests(unittest.TestCase):
             before = sorted(p.name for p in root.iterdir())
             result = subprocess.run([sys.executable, "-B", str(SCRIPTS / "reconcile.py"), "--workspace", str(root), "--before", "before.json", "--after", "after.json"], capture_output=True, text=True, timeout=10, check=False)
             self.assertEqual(0, result.returncode, result.stderr)
-            self.assertIn("VALIDATED_INPUTS", result.stdout)
-            self.assertIn("comparison not yet implemented", result.stdout)
+            report = json.loads(result.stdout)
+            self.assertEqual("REVIEW_REQUIRED", report["result_status"])
+            self.assertEqual("UNCHANGED", report["changes"][0]["status"])
+            self.assertEqual([], report["confirmed_changes"])
             self.assertEqual("", result.stderr)
             self.assertEqual(before, sorted(p.name for p in root.iterdir()))
 
@@ -471,7 +473,9 @@ class CliTests(unittest.TestCase):
             with patch.object(socket, "socket", side_effect=AssertionError("network disabled")), patch.object(subprocess, "Popen", side_effect=AssertionError("process disabled")):
                 result, stdout, stderr = self.invoke(["--workspace", directory, "--before", "before.json", "--after", "after.json"])
             self.assertEqual(0, result)
-            self.assertNotIn(hostile, stdout + stderr)
+            report = json.loads(stdout)
+            self.assertEqual(hostile, report["changes"][0]["before"][0]["source_excerpt"])
+            self.assertEqual("", stderr)
 
 
 if __name__ == "__main__":

@@ -1,8 +1,8 @@
 # CODE_STYLE.md — Engineering Standards
 
-> **Repository reconciliation, 1 November 2026 (SGT):** The initial baseline had no Python implementation. T02 now adds a validation-only CLI, tests and CI configuration; T02_VERIFICATION.md records executed checks. No comparator/exporter or runtime dependency is added. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
+> **Repository reconciliation, 1 November 2026 (SGT):** The initial baseline had no Python implementation. T02 adds validation and T03 adds deterministic comparison with draft JSON stdout, tests and CI configuration. T02_VERIFICATION.md and T03_VERIFICATION.md record executed checks. No file exporter or runtime dependency is added. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
 
-**Status:** Engineering standards applied to T02 validator; later ticket implementation pending | **Runtime:** Python 3.11+ standard library | **Language:** British English for user-facing text.
+**Status:** Engineering standards applied to T02 validator and T03 comparator; exporter and later tickets pending | **Runtime:** Python 3.11+ standard library | **Language:** British English for user-facing text.
 
 ## 1. Principles
 
@@ -54,3 +54,5 @@ Public errors use predictable machine codes, e.g. `INVALID_SCHEMA`, `AMBIGUOUS_D
 ## 7. Source changes and release versions
 
 Use semantic versioning after first approved release. A breaking schema change requires an ADR, migration plan and fixture update. No ticket can add a dependency, network call, account, background job or new data type without approved changes to `SPEC.md`, `SECURITY.md`, `DATABASE.md`, `DATA.md`, `API_GUIDE.md` and the privacy review.
+
+Every change-bearing PR must update VERSION_LOG.md under the mandatory AGENTS.md rule. Update CLI version for changed executable behaviour; documentation-only work need not bump it. Preserve frozen schema versions unless an approved contract change requires a revision.

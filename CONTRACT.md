@@ -2,7 +2,7 @@
 
 **Date:** 1 November 2026 (Asia/Singapore). **Engineering disposition:** adopted for the constrained, fictional-data prototype under the user's instruction to work through T00 decisions and T01 schema approval here. This is a delegated engineering decision, not a fabricated human signature, validated-demand result, merged specification or product-release approval. Independent review and the parent decision record identify final acceptance.
 
-**Canonical files:** [snapshot schema](schemas/snapshot-v1.schema.json), [draft result schema](schemas/result-v1.schema.json), [fictional contract cases](examples/contract-cases.json). Schema dialect: JSON Schema 2020-12. These files define requirements. T02 implements snapshot validation and confined input reads; see T02_VERIFICATION.md for its evidence. Comparator and exporter remain unimplemented.
+**Canonical files:** [snapshot schema](schemas/snapshot-v1.schema.json), [draft result schema](schemas/result-v1.schema.json), [fictional contract cases](examples/contract-cases.json). Schema dialect: JSON Schema 2020-12. These files define requirements. T02 implements snapshot validation and confined input reads; see T02_VERIFICATION.md for its evidence. T03 implements comparison on this branch; exporter remains unimplemented.
 
 ## 1. Scope and precedence
 

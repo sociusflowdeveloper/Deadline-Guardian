@@ -4,14 +4,14 @@
 
 
 **Publisher (proposed):** SociusFlow Pte. Ltd.  
-**Status:** T02 VALIDATOR IMPLEMENTED / COMPARISON AND EXPORT PENDING / NO PRODUCT RELEASE
+**Status:** T03 COMPARATOR IMPLEMENTED ON THIS BRANCH / EXPORT PENDING / NO PRODUCT RELEASE
 **Prepared:** 1 November 2026 (Asia/Singapore) | **Default legal context:** Singapore
 
 > When an assessment deadline changes, see exactly what changed and where the evidence came from, then review it before modifying your plan.
 
 ## This package is not a functioning Agent Skill
 
-These files are **pre-repository planning, risk, API and legal drafts** prepared against the SociusFlow checklist. T02 adds a tested local validation CLI. There is still no tested `SKILL.md`, comparator/exporter, remote API, account, database, effective privacy/terms commitment or approved product release. The repository and original ZIP are already public. Rights, trade-mark, security and product-release evidence remain open.
+These files are **pre-repository planning, risk, API and legal drafts** prepared against the SociusFlow checklist. T02 adds a tested local validation CLI; T03 adds deterministic draft comparison. There is still no tested `SKILL.md` or file exporter, remote API, account, database, effective privacy/terms commitment or approved product release. The repository and original ZIP are already public. Rights, trade-mark, security and product-release evidence remain open.
 
 ## Documents
 
@@ -46,10 +46,10 @@ There is **no authorised automatic calendar update, AI model API key, company da
 
 1. Use the adopted T00 prototype decision in DECISIONS.md; demand validation remains open.
 2. Use the independently reviewed T01 schema/semantic contract.
-3. Start T02 local validator in a fresh ticket-limited context, followed by comparator and exporter tickets.
+3. Continue from the implemented T02 validator and T03 comparator with T04 exporter in a fresh ticket-limited context after prerequisite review/check gates.
 4. Require actual tests, independent review, rights/privacy checks and a separate MD decision before a public product release.
 
-**Current disposition:** GO for constrained fictional-data prototype work; NO-GO for public product release. T02 validation code exists; comparison and export remain later tickets.
+**Current disposition:** GO for constrained fictional-data prototype work; NO-GO for public product release. Validation and comparison code exist on this branch; export and host integration remain later tickets.
 
 ## Current engineering entry points
 
@@ -61,11 +61,11 @@ The original `SociusFlow_Deadline_Drift_Guard_Pre_Repo_Pack.zip` is retained as 
 
 ## Current prototype decision
 
-The user has authorised resolving T00/T01 here. [DECISIONS.md](DECISIONS.md) records the adopted prototype choices and unvalidated-demand assumptions. [CONTRACT.md](CONTRACT.md), [schemas](schemas/snapshot-v1.schema.json) and [fictional cases](examples/contract-cases.json) freeze the T01 contract. [T01 technical acceptance](T01_VERIFICATION.md) is recorded; T02 validator implementation is available; T03 deterministic comparison is next. The validation-only CLI is runnable on the tested Linux environment; no comparator, host compatibility or release approval is claimed.
+The user has authorised resolving T00/T01 here. [DECISIONS.md](DECISIONS.md) records the adopted prototype choices and unvalidated-demand assumptions. [CONTRACT.md](CONTRACT.md), [schemas](schemas/snapshot-v1.schema.json) and [fictional cases](examples/contract-cases.json) freeze the T01 contract. [T01 technical acceptance](T01_VERIFICATION.md) is recorded; T02 validator implementation is available; T03 deterministic comparison is implemented on this branch. The CLI validates and compares supplied fictional snapshots on the tested Linux environment. No host compatibility or release approval is claimed.
 
-## Run T02 input validation
+## Run the offline draft comparator
 
-Python 3.11+ is required. The safe filesystem reader is implemented for POSIX environments with descriptor-relative no-follow file operations; tested locally on Linux. Unsupported platforms fail closed. No package installation or API key is needed.
+Python 3.11+ is required. The safe filesystem reader uses POSIX descriptor-relative no-follow operations; unsupported platforms fail closed. No package installation or API key is needed.
 
 ```bash
 python skills/academic-deadline-drift-guard/scripts/reconcile.py \
@@ -74,9 +74,13 @@ python skills/academic-deadline-drift-guard/scripts/reconcile.py \
   --after examples/fictional-after.json
 ```
 
-Expected: `VALIDATED_INPUTS: review required; comparison not yet implemented.` Exit 0 means input validation only, not a resolved deadline. The command does not generate a report, save output, compare dates or change a calendar yet.
+Success prints draft JSON to standard output with `result_status=REVIEW_REQUIRED`, all six provisional status labels as applicable and `confirmed_changes=[]`. Exit 0 means a draft was generated, including possible conflicts; it never confirms a deadline. The helper does not save a report or modify calendars. Explicit safe file export belongs to T04.
 
-Run regression checks with `python -m unittest discover -s tests -v`. See [T02_VERIFICATION.md](T02_VERIFICATION.md) for actual results, capability skips and review limits.
+Run `python -m unittest discover -s tests -v`. See [T02 verification](T02_VERIFICATION.md) and [T03 verification](T03_VERIFICATION.md) for actual checks and limitations.
+
+## Version history and completeness
+
+[VERSION_LOG.md](VERSION_LOG.md) records each change set, evidence, unresolved gates and rollback. Every change-bearing PR must update it under [AGENTS.md](AGENTS.md). [COMPLETENESS.md](COMPLETENESS.md) defines the product score and remaining delivery work. The source ZIP and earlier verification records remain historical.
 
 ## Language and code hygiene
 
