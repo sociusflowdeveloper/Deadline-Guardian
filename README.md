@@ -4,14 +4,14 @@
 
 
 **Publisher (proposed):** SociusFlow Pte. Ltd.  
-**Status:** T04 DRAFT EXPORTS IMPLEMENTED ON THIS BRANCH / SKILL PACKAGE PENDING / NO PRODUCT RELEASE
+**Status:** T05 REPOSITORY SKILL PACKAGE IMPLEMENTED / HOST TESTS PENDING / NO PRODUCT RELEASE
 **Prepared:** 1 November 2026 (Asia/Singapore) | **Default legal context:** Singapore
 
 > When an assessment deadline changes, see exactly what changed and where the evidence came from, then review it before modifying your plan.
 
-## This package is not a functioning Agent Skill
+## Prototype package and verification boundary
 
-These files are **pre-repository planning, risk, API and legal drafts** prepared against the SociusFlow checklist. T02 adds a tested local validation CLI; T03 adds deterministic draft comparison; T04 adds explicit local draft exports. There is still no tested `SKILL.md`, remote API, account, database, effective privacy/terms commitment or approved product release. The repository and original ZIP are already public. Rights, trade-mark, security and product-release evidence remain open.
+These files are **pre-repository planning, risk, API and legal drafts** prepared against the SociusFlow checklist. T02 adds a tested local validation CLI; T03 adds deterministic draft comparison; T04 adds explicit local draft exports; T05 adds the canonical repository skill package and local package checks. This is not proof of installation or invocation on Claude or a second host. There is no remote API, account, database, effective privacy/terms commitment or approved product release. The repository and original ZIP are already public. Rights, trade-mark, security and product-release evidence remain open.
 
 ## Documents
 
@@ -46,10 +46,10 @@ There is **no authorised automatic calendar update, AI model API key, company da
 
 1. Use the adopted T00 prototype decision in DECISIONS.md; demand validation remains open.
 2. Use the independently reviewed T01 schema/semantic contract.
-3. Continue from the implemented T02 validator, T03 comparator and T04 exporters with T05 skill authoring in a fresh ticket-limited context after T03/T04 prerequisite review/check gates.
+3. Continue from the implemented T02 validator, T03 comparator and T04 exporters with T06 independent local security verification in a fresh ticket-limited context after prerequisite review/check gates.
 4. Require actual tests, independent review, rights/privacy checks and a separate MD decision before a public product release.
 
-**Current disposition:** GO for constrained fictional-data prototype work; NO-GO for public product release. Validation, comparison and explicit local export code exist on this branch; skill packaging and host integration remain later tickets.
+**Current disposition:** GO for constrained fictional-data prototype work; NO-GO for public product release. Validation, comparison and explicit local export code exist on this branch; T05 packaging is present, while security, real host invocation and release gates remain open.
 
 ## Current engineering entry points
 
@@ -101,3 +101,9 @@ python skills/academic-deadline-drift-guard/scripts/reconcile.py \
 Formats: `json` with `.json`, `csv` with `.csv`, `markdown` with `.md`. Choose a different new filename for each run; existing targets, symlink components and unsafe paths are rejected. No overwrite or implicit directory creation is supported.
 
 Exports remain unconfirmed proposals, including conflicts and unknown dates. JSON preserves canonical evidence strings. CSV formula neutralisation and Markdown escaping change display representations without changing canonical input evidence. Review reports before acting; exported evidence remains untrusted data. Keep real reports outside public repositories and delete local exports/backups yourself when no longer needed; the helper does not erase AI-provider chats or uploads.
+
+## Repository skill package
+
+Read [the canonical skill](skills/academic-deadline-drift-guard/SKILL.md) and its bundled references before use. The helper accepts schema-valid local JSON; interpreting pasted text is a separate, uncertain agent-assisted step. Follow the package's exact paths, privacy safeguards and host capability limits.
+
+[T05_VERIFICATION.md](T05_VERIFICATION.md) records local package validation and fictional runs. These checks do not install the skill into a personal account or prove an actual Claude/second-host workflow. T08 requires real invocation evidence. The existing source ZIP remains a historical planning pack, not this skill's current install package.

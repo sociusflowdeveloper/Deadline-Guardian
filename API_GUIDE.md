@@ -3,7 +3,7 @@
 > **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
 
-**Status:** T04 validation/comparison and explicit draft exports implemented on this branch; Agent Skill packaging and host compatibility remain pending.
+**Status:** T04 validation/comparison and explicit draft exports implemented on this branch; T05 repository skill packaging is present; host compatibility remains pending.
 **v0.1 decision:** No HTTP endpoints, no webhooks, no OAuth, no SDK calls, no remote writes and no paid APIs.
 
 ## 1. Canonical contract
@@ -37,3 +37,7 @@ Both export options are required together. Accepted format/suffix pairs are `jso
 Reports always retain REVIEW_REQUIRED, explicit review/confirmation flags and no confirmed changes; CSV/Markdown are draft report representations, not final deadline imports. JSON preserves exact canonical strings. CSV quotes fields and neutralises formula-leading text; Markdown neutralises markup/HTML and links. Rendering transformations are not corrections to source evidence.
 
 On export failure no deadline is confirmed and inputs remain unchanged. Errors remain fixed categories/paths with exit codes 2/3/4 as applicable; no raw source values or filenames are echoed. T04_VERIFICATION.md records tested write failure/race cases and platform limits.
+
+## T05 package entry point
+
+`skills/academic-deadline-drift-guard/SKILL.md` supplies the agent-facing workflow and bundled references. The existing Python CLI/interface and frozen v1 contracts are unchanged. T05_VERIFICATION.md distinguishes local package checks from T08 actual host invocation and provider eligibility checks. No personal installation or host compatibility is implied.

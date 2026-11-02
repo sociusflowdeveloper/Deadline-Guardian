@@ -2,6 +2,14 @@
 
 Maintained change history. All dates use Asia/Singapore. Prototype versions are engineering identifiers, not approved product releases. Every change-bearing PR must update this file; see AGENTS.md. Historical entries below are reconstructed from inspected Git history, not newly asserted approvals.
 
+## T05 repository skill package — 2 November 2026
+
+- State: implemented as a repository package, stacked on T04 PR #5; final local verification and independent review in T05_VERIFICATION.md, with PR CI/authorised human approval recorded separately. No personal skill installation, actual host invocation, merge or release is asserted.
+- Changes: canonical SKILL.md, minimal bundled contract/fictional-use references, explicit safe triggers/workflow/host limits and package integrity checks. Existing runtime remains 0.3.0-prototype-t04; no schema/algorithm revision or new dependency.
+- Verification: T05_VERIFICATION.md records actual validation/run commands, review findings and limits. T04 CI run 41327827882 succeeded at d1a0f620f03a6b6bbaa388e3a38e9e1d9751e780; earlier preparation records are retained.
+- Completeness: 75/100 after T05 local evidence/review, unchanged weights. Next ticket: T06 independent full local package security review before the 80-point target can be met.
+- Rollback: close this PR before merge; reviewed revert after authorised merge removes the packaging/docs/checks while retaining T04 helper. No provider installation or user data migration to reverse.
+
 ## 0.3.0-prototype-t04 — 2 November 2026 — T04
 
 - State: implemented on a feature branch stacked on T03 PR #4. Local verification: 66 tests run, 65 passed and one inherited UNIX-socket capability skip; compile/whitespace checks passed. Independent technical review found no material defect; details in T04_VERIFICATION.md; current-head CI and human approval remain separate gates. No merge or product release is claimed.
