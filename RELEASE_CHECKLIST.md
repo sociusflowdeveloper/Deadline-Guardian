@@ -109,3 +109,9 @@
 | DPO/privacy review | PENDING | Designated DPO (if appointed) | — | — |
 | IP and legal clearance | PENDING | Company + qualified adviser | — | — |
 | Public release | NO-GO pending evidence | Managing Director | — | — |
+
+## Current technical evidence overlay — 2 November 2026 SGT
+
+The historical checklist above records planning status. Current local evidence is in T02_VERIFICATION.md through T05_VERIFICATION.md and T06_SECURITY_REVIEW.md. Repository skill packaging, helper comparison/exports and scoped adversarial/security checks now exist on reviewed feature branches. See VERSION_LOG.md and each stacked PR for exact-commit CI and merge state. Do not reinterpret historical `[x]` boxes as approvals or unchecked platform/rights/host items as passed.
+
+**Still open / stop release:** five interviews and wider-investment demand threshold; company rights/licensing and name clearance; approved privacy/terms/minor safeguards; actual Claude and second eligible host invocation; verified private vulnerability reporting/contact and platform security settings; authorised human merge/release decisions and exact-final-commit checks. T06 local technical checks do not close these external gates. Public product release remains NO-GO.

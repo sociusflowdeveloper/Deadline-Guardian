@@ -4,7 +4,7 @@
 
 
 **Publisher (proposed):** SociusFlow Pte. Ltd.  
-**Status:** T05 REPOSITORY SKILL PACKAGE IMPLEMENTED / HOST TESTS PENDING / NO PRODUCT RELEASE
+**Status:** T05 PACKAGE AND T06 LOCAL SECURITY CHECKS / HOST TESTS PENDING / NO PRODUCT RELEASE
 **Prepared:** 1 November 2026 (Asia/Singapore) | **Default legal context:** Singapore
 
 > When an assessment deadline changes, see exactly what changed and where the evidence came from, then review it before modifying your plan.
@@ -46,10 +46,10 @@ There is **no authorised automatic calendar update, AI model API key, company da
 
 1. Use the adopted T00 prototype decision in DECISIONS.md; demand validation remains open.
 2. Use the independently reviewed T01 schema/semantic contract.
-3. Continue from the implemented T02 validator, T03 comparator and T04 exporters with T06 independent local security verification in a fresh ticket-limited context after prerequisite review/check gates.
+3. Continue from the implemented T02 validator, T03 comparator and T04 exporters with T07 rights/privacy clearance and T08 actual host verification after prerequisite review/check gates.
 4. Require actual tests, independent review, rights/privacy checks and a separate MD decision before a public product release.
 
-**Current disposition:** GO for constrained fictional-data prototype work; NO-GO for public product release. Validation, comparison and explicit local export code exist on this branch; T05 packaging is present, while security, real host invocation and release gates remain open.
+**Current disposition:** GO for constrained fictional-data prototype work; NO-GO for public product release. Validation, comparison and explicit local export code exist on this branch; T05 packaging is present, with T06 local security evidence recorded separately; real host invocation, IP/privacy and release gates remain open.
 
 ## Current engineering entry points
 
@@ -107,3 +107,11 @@ Exports remain unconfirmed proposals, including conflicts and unknown dates. JSO
 Read [the canonical skill](skills/academic-deadline-drift-guard/SKILL.md) and its bundled references before use. The helper accepts schema-valid local JSON; interpreting pasted text is a separate, uncertain agent-assisted step. Follow the package's exact paths, privacy safeguards and host capability limits.
 
 [T05_VERIFICATION.md](T05_VERIFICATION.md) records local package validation and fictional runs. These checks do not install the skill into a personal account or prove an actual Claude/second-host workflow. T08 requires real invocation evidence. The existing source ZIP remains a historical planning pack, not this skill's current install package.
+
+## Local security verification boundary
+
+[T06_SECURITY_REVIEW.md](T06_SECURITY_REVIEW.md) records the local helper/package threat assessment, reproducible scans, adversarial checks and residual risks. Heuristic secret scans and controlled local tests do not certify security, prove every historical copy is clear, validate real student data or establish host prompt-injection resistance. No account permissions, private reporting channel, provider setting or legal approval was changed.
+
+The unchanged weighted scorecard reaches 85/100 only after the reviewed T05/T06 technical evidence. Remaining points depend on real demand interviews, rights/privacy clearance, actual host runs and an authorised release decision. Public product release remains NO-GO.
+
+Run the maintainer security review aid with `python -B scripts/security_check.py --history`. It scans non-ignored current repository files and reachable objects available locally, including bounded archive members, without extracting or executing them. Exit 0 means no heuristic findings in that scope; 1 requires review; 2 means the scan is incomplete. CI uses a shallow checkout and reports that limitation. It does not fetch remote history or scan student workspaces.

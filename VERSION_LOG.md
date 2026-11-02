@@ -2,12 +2,20 @@
 
 Maintained change history. All dates use Asia/Singapore. Prototype versions are engineering identifiers, not approved product releases. Every change-bearing PR must update this file; see AGENTS.md. Historical entries below are reconstructed from inspected Git history, not newly asserted approvals.
 
+## T06 local package security verification — 2 November 2026
+
+- State: scoped independent local security assessment and regression/scan artefacts on a separate stacked PR; final evidence in T06_SECURITY_REVIEW.md. No public release, platform-setting change, host certification or human approval implied.
+- Changes: bounded standard-library security scan, adversarial local tests, CI invocation and reconciled release/threat records. Runtime helper version and v1 schemas are unchanged unless separately recorded corrective findings require a reviewed fix.
+- Verification: actual commands/counts, independent review, findings/severity and scan scope/limits in T06_SECURITY_REVIEW.md; subsequent current-head CI results recorded in PR. No secret matches or real student records are printed into reports.
+- Completeness: 85/100 after reviewed local T05/T06 evidence; unchanged rubric. Stop at this coherent milestone, exceeding requested 80/100. T00 interviews and T07–T09 remain open.
+- Rollback: close PR before merge; reviewed revert of test/scan/workflow/documentation changes after authorised merge. No product data, hosting or installed personal skill to reverse.
+
 ## T05 repository skill package — 2 November 2026
 
 - State: implemented as a repository package, stacked on T04 PR #5; final local verification and independent review in T05_VERIFICATION.md, with PR CI/authorised human approval recorded separately. No personal skill installation, actual host invocation, merge or release is asserted.
 - Changes: canonical SKILL.md, minimal bundled contract/fictional-use references, explicit safe triggers/workflow/host limits and package integrity checks. Existing runtime remains 0.3.0-prototype-t04; no schema/algorithm revision or new dependency.
 - Verification: T05_VERIFICATION.md records actual validation/run commands, review findings and limits. T04 CI run 41327827882 succeeded at d1a0f620f03a6b6bbaa388e3a38e9e1d9751e780; earlier preparation records are retained.
-- Completeness: 75/100 after T05 local evidence/review, unchanged weights. Next ticket: T06 independent full local package security review before the 80-point target can be met.
+- Completeness: 75/100 after T05 local evidence/review, unchanged weights. Next ticket: T06 independent full local package security review before the 80-point target can be met. Subsequent T05 CI is recorded in its PR.
 - Rollback: close this PR before merge; reviewed revert after authorised merge removes the packaging/docs/checks while retaining T04 helper. No provider installation or user data migration to reverse.
 
 ## 0.3.0-prototype-t04 — 2 November 2026 — T04
