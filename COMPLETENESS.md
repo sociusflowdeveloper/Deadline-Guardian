@@ -29,3 +29,8 @@ Formula: score = sum(earned points); 5 + 10 + 15 + 20 + 15 + 10 + 10 = 85. Weigh
 5. **P0 T09, Managing Director:** exact-commit checks, approvals, rollback and recorded GO/NO-GO. Demand interviews remain a wider-investment/launch prerequisite.
 
 No deadlines or appointments have been fabricated. Review at the next ticket hand-off. Confidence in this score: **0.80**, limited by judgement-based weights, pending final CI/human approval and absent host/user-validation evidence.
+
+
+## Documentation baseline update — 9 November 2026 (SGT)
+
+The eighteen requested document categories are now present (existing detailed documents preserved, eight companions added). This is documentation coverage only. Historical 85/100 engineering estimate is not increased; no fresh runtime, host, legal, demand or release evidence is created. Draft PR review and all listed product-release gates remain open. See DOCUMENTATION-INDEX.md and VERSION_LOG.md.

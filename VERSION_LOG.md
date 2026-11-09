@@ -47,3 +47,19 @@ CONFIRMED Git history: merge f5bc17c; implementation 6c8bd58; CI action update a
 ## Planning baseline — 1 November 2026 — B00 / T00 / T01 / PR #1
 
 CONFIRMED Git history: merge f2b2929; extracted documentation ec91efb; prototype decisions and contract 7e50349. Unzipped working documentation, adopted constrained prototype assumptions and froze schema/semantic contract. No runtime release version existed. Five interviews, IP/legal and product-release gates remained open.
+
+
+## DOC-BASELINE — 9 November 2026 (SGT)
+
+- Scope: user-requested documentation baseline; no runtime version or schema change.
+- Added eight missing launch/security/product/architecture/agent/design companion files and documentation index; extended thirteen-rule security baseline, existing privacy/terms/data/deletion drafts and agent pointer without removing historical content.
+- Reconciled proposed 16+ eligibility as a pending company choice (not law), category retention, offline deletion limits and separate future commercial terms.
+- Verification: all eighteen required paths covered; Markdown links for new companion docs resolve to inspected tree/additions; changed files Markdown only. No runtime unittest/security scan/host tests rerun in this documentation pass; no new technical score or security certification claimed.
+- Review/merge/release: draft PR for review; not approved or released. Existing rights, host, privacy, demand and release gates remain.
+- Baseline: c8fe3ba8fcc869ea6b6fe362f8f4be31569381ee. Rollback: reviewed documentation revert; preserve source ZIP, LICENSE, user data and historical verification.
+
+
+### Privacy contact refinement — 9 November 2026 (SGT)
+
+**CONFIRMED — user decision, 9 November 2026 (Asia/Singapore):** the public privacy contact is pratheeksha@sociusflow.com. This confirms the selected address only. Actual mailbox monitoring, response-process readiness and formal statutory DPO appointment remain UNKNOWN and require separate evidence.
+Updated draft privacy/terms/data/deletion/index contact statements only; historical records, licences and runtime remain unchanged. Verification: changed files are Markdown; confirmed address and UNKNOWN operational limitations reviewed. No email sent or mailbox/provider setting changed.

@@ -51,7 +51,7 @@ No pricing, subscription, invoicing or in-app payment is authorised for v0.1. Us
 
 ## 10. Contact and disputes
 
-A verified official support/privacy contact and company address or registered-office disclosures, as required for the chosen service context, must be added before publication. No contact route is presumed functional from this draft. Seek good-faith resolution first; mandatory statutory rights remain unaffected. Proposed forum for applicable disputes: courts of Singapore, subject to mandatory consumer/jurisdictional rules.
+The public privacy contact is pratheeksha@sociusflow.com, confirmed by user decision on 9 November 2026 (SGT). Actual monitoring, formal statutory DPO appointment, any separate support route and company address/registered-office disclosures required for the chosen service context still need verification before publication. This does not establish a support SLA or operational response process. Seek good-faith resolution first; mandatory statutory rights remain unaffected. Proposed forum for applicable disputes: courts of Singapore, subject to mandatory consumer/jurisdictional rules.
 
 ## Release checklist for counsel
 
@@ -64,3 +64,14 @@ A verified official support/privacy contact and company address or registered-of
 - [ ] Confirm claims match tested functionality and `PRIVACY POLICY.md`.
 
 **NOT APPROVED.** No representation is made that this draft currently creates enforceable terms.
+
+
+## Current refinement note — 9 November 2026 (SGT)
+
+DRAFT — NOT APPROVED FOR PUBLICATION OR CONTRACTUAL USE. PROPOSAL: 16+ product eligibility is a company choice, not a Singapore statutory threshold; reconcile the existing initial 18+ research scope before launch. Younger users need separate management/privacy decision and safeguards. DATA.md is the canonical proposed retention schedule; local files remain user-controlled, host copies are independent and optional future support retention of 12 months after closure is unapproved. PDPA withdrawal/retention obligations do not establish an unconditional universal erasure right. This offline package has no hosted account deletion or billing. Keep any future app subscription terms separate from website/AI administrative services terms. Sources: Singapore Statutes Online (2026), Personal Data Protection Act 2012, https://sso.agc.gov.sg/Act/PDPA2012 ; PDPC (2026), Guidance by Topic, https://www.pdpc.gov.sg/organisations/resources/guidance-by-topic .
+
+
+## Privacy contact confirmation — 9 November 2026 (SGT)
+
+**CONFIRMED — user decision, 9 November 2026 (Asia/Singapore):** the public privacy contact is pratheeksha@sociusflow.com. This confirms the selected address only. Actual mailbox monitoring, response-process readiness and formal statutory DPO appointment remain UNKNOWN and require separate evidence.
+This current decision supersedes earlier proposed/unknown address-selection wording; historical dated records remain evidence of their original state. Privacy/deletion requests may use the selected address; no monitored-mailbox claim or response-time promise is made.

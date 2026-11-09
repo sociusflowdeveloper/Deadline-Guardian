@@ -25,3 +25,7 @@
 Update `VERSION_LOG.md` in **every change-bearing PR**, including code, tests, CI, documentation, policy and corrective changes. Keep one entry per coherent change set; update that entry when revising the same PR. Record Asia/Singapore date, ticket, prototype/product version, concrete changes, actual verification, review/merge/release state, outstanding gates and rollback. Record failures and unrun checks explicitly. Never invent historical versions, signatures, approvals or test results; retain old entries and label corrections.
 
 Update `COMPLETENESS.md` whenever delivered scope or verification changes. Reconcile current README, API and ticket status in the same PR. Keep historical verification records and the source ZIP immutable; label prototype versions separately from approved releases. PR reviewers must block a change missing its version-log update. This is a documented review rule, not a claim of automated enforcement.
+
+## Documentation baseline companion
+
+Read DOCUMENTATION-INDEX.md and AI-AGENT-INSTRUCTIONS.md plus applicable launch, threat, architecture, privacy and design files before affected changes. Preserve existing ticket, independent review, language, version-log, licence and release boundaries. Draft legal documents and proposals do not authorise processing, sale, merge or release.

@@ -78,3 +78,16 @@ The adopted contract includes each supplied source extract as `source.text` (up 
 ## T04 local export refinement
 
 The user may explicitly persist draft reports under the workspace. Reports contain record titles, due fields and necessary evidence excerpts, never entire source bodies as additional fields. Keep exports out of public issues, CI and repositories. CSV/Markdown apply display sanitisation; JSON is the canonical exact-evidence representation. There is no operator backup, expiry job or hosted retention control. The implementation's private transient staging is part of the requested write, not telemetry or a retained cache. See T04_VERIFICATION.md for actual failure cleanup/race checks and limitations.
+
+
+## Retention refinement — 9 November 2026 (SGT)
+
+This remains a draft, not an approved privacy notice or live retention commitment. User-controlled inputs/reports/staging remnants and device/cloud backups remain until the user deletes them under their own storage arrangements; no operator expiry job or hosted backup is introduced. Independent AI host chats/uploads follow verified host settings, not a helper deletion guarantee.
+
+PROPOSAL only: if optional support correspondence is introduced, retain for 12 months after closure, subject to documented lawful necessity/holds and privacy review. No support-data collection is asserted. Future hosted categories require separately approved numerical targets and implementation; no fictional 30-day account-deletion or 35-day operator-backup promise applies to this offline package. Business/legal records require a separately justified schedule. PRIVACY POLICY.md and DELETE.md refer to this file as canonical retention proposal.
+
+
+## Privacy contact confirmation — 9 November 2026 (SGT)
+
+**CONFIRMED — user decision, 9 November 2026 (Asia/Singapore):** the public privacy contact is pratheeksha@sociusflow.com. This confirms the selected address only. Actual mailbox monitoring, response-process readiness and formal statutory DPO appointment remain UNKNOWN and require separate evidence.
+This current decision supersedes earlier proposed/unknown address-selection wording; historical dated records remain evidence of their original state. Privacy/deletion requests may use the selected address; no monitored-mailbox claim or response-time promise is made.
