@@ -14,7 +14,7 @@
 | Generated `.json`, `.csv`, `.md` | User's workspace | Delete output files and any backups/synchronised copies | Does not erase other systems' imports |
 | AI host conversation and uploads | Host provider | Use that host's documented chat/file deletion controls | Not controlled by SociusFlow skill |
 | Public GitHub issue/PR | GitHub and maintainers | Edit or request removal through provider/maintainer | Mirrors, caches and copies may remain |
-| Voluntary feedback to company | SociusFlow if actually received | Send request to **verified** contact once published | Legal/legitimate retention exceptions may apply |
+| Voluntary feedback to company | SociusFlow if actually received | Send request to pratheeksha@sociusflow.com (user-selected privacy address confirmed 9 November 2026 SGT; monitoring remains unverified) | Legal/legitimate retention exceptions may apply |
 
 The helper must not create persistent caches, silent backup directories or unrequested telemetry. **Implementation tests are required**. Secure erasure from storage media, provider backups and third-party copies cannot be guaranteed simply by deleting a local file.
 
@@ -68,3 +68,9 @@ Explicit draft exports are now implemented on this branch. There is no automatic
 ## Current refinement note — 9 November 2026 (SGT)
 
 DRAFT — NOT APPROVED FOR PUBLICATION OR CONTRACTUAL USE. PROPOSAL: 16+ product eligibility is a company choice, not a Singapore statutory threshold; reconcile the existing initial 18+ research scope before launch. Younger users need separate management/privacy decision and safeguards. DATA.md is the canonical proposed retention schedule; local files remain user-controlled, host copies are independent and optional future support retention of 12 months after closure is unapproved. PDPA withdrawal/retention obligations do not establish an unconditional universal erasure right. This offline package has no hosted account deletion or billing. Keep any future app subscription terms separate from website/AI administrative services terms. Sources: Singapore Statutes Online (2026), Personal Data Protection Act 2012, https://sso.agc.gov.sg/Act/PDPA2012 ; PDPC (2026), Guidance by Topic, https://www.pdpc.gov.sg/organisations/resources/guidance-by-topic .
+
+
+## Privacy contact confirmation — 9 November 2026 (SGT)
+
+**CONFIRMED — user decision, 9 November 2026 (Asia/Singapore):** the public privacy contact is pratheeksha@sociusflow.com. This confirms the selected address only. Actual mailbox monitoring, response-process readiness and formal statutory DPO appointment remain UNKNOWN and require separate evidence.
+This current decision supersedes earlier proposed/unknown address-selection wording; historical dated records remain evidence of their original state. Privacy/deletion requests may use the selected address; no monitored-mailbox claim or response-time promise is made.

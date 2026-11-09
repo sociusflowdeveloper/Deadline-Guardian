@@ -32,3 +32,9 @@ App subscription terms must remain separate from website/AI administrative servi
 ## Review and status
 
 Owner: Admin for age/commercial/rights; engineering for local/host evidence; designated privacy reviewer for notices/retention. Documents are draft or scoped engineering requirements, never certification. Update affected contracts/threat/data/design docs before behaviour changes. Revert documentation through a reviewed PR without touching original ZIP, LICENSE, user files or historical verification.
+
+
+## Privacy contact confirmation — 9 November 2026 (SGT)
+
+**CONFIRMED — user decision, 9 November 2026 (Asia/Singapore):** the public privacy contact is pratheeksha@sociusflow.com. This confirms the selected address only. Actual mailbox monitoring, response-process readiness and formal statutory DPO appointment remain UNKNOWN and require separate evidence.
+This current decision supersedes earlier proposed/unknown address-selection wording; historical dated records remain evidence of their original state. Privacy/deletion requests may use the selected address; no monitored-mailbox claim or response-time promise is made.

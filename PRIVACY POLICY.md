@@ -5,7 +5,7 @@
 **DRAFT — NOT APPROVED FOR PUBLICATION OR REPRESENTED AS AN IMPLEMENTED PRIVACY PROGRAMME**  
 **Product:** Academic Deadline Drift Guard | **Proposed publisher:** SociusFlow Pte. Ltd.  
 **Draft date:** 1 November 2026, Singapore Time | **Jurisdictional baseline:** Singapore  
-**Contact routing:** Proposed privacy contact: `pratheeksha@sociusflow.com` — **recipient, authority, monitoring and DPO appointment must be verified before publication**. This is not a claim that the listed person is formally designated or available.
+**Contact routing:** CONFIRMED by current user decision, 9 November 2026 (SGT): public privacy contact `pratheeksha@sociusflow.com`. Actual mailbox monitoring, response-process readiness and formal statutory DPO appointment remain UNKNOWN; the selected address does not establish those facts.
 
 ## 1. Scope and operating distinction
 
@@ -47,7 +47,7 @@ Proposed safeguards include no network capability in the helper, strict validati
 
 Where SociusFlow actually possesses or controls personal data, individuals may contact the company about access, correction, withdrawal of consent, retention and deletion, subject to applicable law and valid exceptions. **SociusFlow cannot delete records held independently by an AI host or GitHub merely because a request is addressed to SociusFlow**. For those records users should use the respective provider's controls. Identity verification must be proportionate and must not itself cause unnecessary data collection.
 
-The privacy contact and a functional response process are launch prerequisites; they have **not** been verified for this draft.
+The public privacy address is now user-confirmed. Actual monitoring and a functional response process remain launch prerequisites and have **not** been verified for this draft.
 
 ## 8. Children and student materials
 
@@ -71,3 +71,9 @@ DG-DEC-001 adopts a local JSON contract that includes bounded source text alongs
 ## Current refinement note — 9 November 2026 (SGT)
 
 DRAFT — NOT APPROVED FOR PUBLICATION OR CONTRACTUAL USE. PROPOSAL: 16+ product eligibility is a company choice, not a Singapore statutory threshold; reconcile the existing initial 18+ research scope before launch. Younger users need separate management/privacy decision and safeguards. DATA.md is the canonical proposed retention schedule; local files remain user-controlled, host copies are independent and optional future support retention of 12 months after closure is unapproved. PDPA withdrawal/retention obligations do not establish an unconditional universal erasure right. This offline package has no hosted account deletion or billing. Keep any future app subscription terms separate from website/AI administrative services terms. Sources: Singapore Statutes Online (2026), Personal Data Protection Act 2012, https://sso.agc.gov.sg/Act/PDPA2012 ; PDPC (2026), Guidance by Topic, https://www.pdpc.gov.sg/organisations/resources/guidance-by-topic .
+
+
+## Privacy contact confirmation — 9 November 2026 (SGT)
+
+**CONFIRMED — user decision, 9 November 2026 (Asia/Singapore):** the public privacy contact is pratheeksha@sociusflow.com. This confirms the selected address only. Actual mailbox monitoring, response-process readiness and formal statutory DPO appointment remain UNKNOWN and require separate evidence.
+This current decision supersedes earlier proposed/unknown address-selection wording; historical dated records remain evidence of their original state. Privacy/deletion requests may use the selected address; no monitored-mailbox claim or response-time promise is made.
