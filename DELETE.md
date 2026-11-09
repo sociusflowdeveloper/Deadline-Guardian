@@ -63,3 +63,8 @@ Apple's rules require apps supporting account creation to allow users to initiat
 ## T04 local report lifecycle
 
 Explicit draft exports are now implemented on this branch. There is no automatic deletion command. Users control the requested output and any backups/synchronised copies; code rollback does not delete those files. T04 uses private transient staging for complete-file publication, attempts staging cleanup on completion/handled failures and never overwrites an existing destination. Cleanup failure, abrupt termination or hardware failure can leave a private staging file for the user to remove. None of this removes AI-provider conversations/uploads or guarantees secure erasure. See T04_VERIFICATION.md for tested cases and limits.
+
+
+## Current refinement note — 9 November 2026 (SGT)
+
+DRAFT — NOT APPROVED FOR PUBLICATION OR CONTRACTUAL USE. PROPOSAL: 16+ product eligibility is a company choice, not a Singapore statutory threshold; reconcile the existing initial 18+ research scope before launch. Younger users need separate management/privacy decision and safeguards. DATA.md is the canonical proposed retention schedule; local files remain user-controlled, host copies are independent and optional future support retention of 12 months after closure is unapproved. PDPA withdrawal/retention obligations do not establish an unconditional universal erasure right. This offline package has no hosted account deletion or billing. Keep any future app subscription terms separate from website/AI administrative services terms. Sources: Singapore Statutes Online (2026), Personal Data Protection Act 2012, https://sso.agc.gov.sg/Act/PDPA2012 ; PDPC (2026), Guidance by Topic, https://www.pdpc.gov.sg/organisations/resources/guidance-by-topic .

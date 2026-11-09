@@ -66,3 +66,8 @@ PDPC (2022), *Advisory Guidelines on Key Concepts in the PDPA*, https://www.pdpc
 ## Prototype contract clarification (draft)
 
 DG-DEC-001 adopts a local JSON contract that includes bounded source text alongside extracted records so the future helper can check literal excerpts. Source text can contain personal data and should be minimised before supply. Full source bodies are not intended to be copied into draft result files. This design is not implemented or tested here; it creates no live privacy promise or change to independent host retention.
+
+
+## Current refinement note — 9 November 2026 (SGT)
+
+DRAFT — NOT APPROVED FOR PUBLICATION OR CONTRACTUAL USE. PROPOSAL: 16+ product eligibility is a company choice, not a Singapore statutory threshold; reconcile the existing initial 18+ research scope before launch. Younger users need separate management/privacy decision and safeguards. DATA.md is the canonical proposed retention schedule; local files remain user-controlled, host copies are independent and optional future support retention of 12 months after closure is unapproved. PDPA withdrawal/retention obligations do not establish an unconditional universal erasure right. This offline package has no hosted account deletion or billing. Keep any future app subscription terms separate from website/AI administrative services terms. Sources: Singapore Statutes Online (2026), Personal Data Protection Act 2012, https://sso.agc.gov.sg/Act/PDPA2012 ; PDPC (2026), Guidance by Topic, https://www.pdpc.gov.sg/organisations/resources/guidance-by-topic .

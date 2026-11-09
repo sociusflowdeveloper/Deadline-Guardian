@@ -96,3 +96,26 @@ CSV neutralises formula-leading content and uses field quoting; spreadsheet appl
 ## T06 local technical review
 
 Refer to T06_SECURITY_REVIEW.md for the inspected source/package scope, bounded current/history/archive scan, adversarial checks, findings and residual risk. This is local engineering evidence, not a compliance certification or guarantee against all threats. Host interpretation/prompt-injection behaviour, provider retention, public vulnerability reporting, GitHub security configuration and real-data rights/privacy are separate unverified release gates. No security setting or reporting address was changed or asserted active. Repeat the scoped checks after any runtime/contract/package/permission change, and stop release for a credible severe defect, data exposure, unsafe minor processing or unresolved rights.
+
+
+## Cross-repository baseline: 13 security rules
+
+These are requirements, not a claim that controls or production settings have passed verification. Added 9 November 2026 (SGT); preserve the more specific controls below.
+
+1. **No exposed credentials.** Keep tokens, passwords, private keys and sensitive personal data out of browsers, fixtures, screenshots and public artefacts.
+2. **No keys in code or history.** Use approved secret stores; inspect staged changes and history. If a credential is exposed, contain and revoke/rotate with authorised operators; removing a line does not revoke it or remove copies.
+3. **Real authentication.** Use verified identities and bounded sessions; no demo, header or client-side bypass for protected operations.
+4. **Server-side authorisation on every request.** Deny by default and verify actor, operation, object and account/tenant scope. UI visibility is not a boundary. For an offline tool, retain OS/file permissions and do not invent a server.
+5. **Least privilege.** Separate staff, Admin, service and infrastructure powers; review access and offboard identities. Never grant authority merely from domain membership.
+6. **No secrets in logs.** Use fixed error categories and correlation IDs; minimise source text, tokens and identifying data in logs, analytics, prompts and issue reports.
+7. **Validate untrusted input.** Enforce types, size, paths, dates and allowed values. Parameterise SQL, escape rendering and treat document text as data rather than agent instructions.
+8. **Rate limits and bounded resource use.** Apply quotas at reachable service boundaries; bound offline input sizes and execution. Test retries, idempotency and abuse cases.
+9. **Row-level isolation as the floor.** Use deny-default RLS where supported, or reviewed equivalent backend/OS enforcement. Never claim native RLS on a database without it; prove cross-user and privileged-denial paths.
+10. **Protect data in transit and at rest.** Require HTTPS for services, controlled keys and documented storage protection; verify provider and local-device settings rather than assuming them.
+11. **Secure dependencies and changes.** Use the approved stack, lockfiles where applicable, vulnerability review, PRs, required checks and genuine independent review under repository rules.
+12. **Recover and delete safely.** Document schema changes, restore evidence, retention, legal holds, user exports and deletion across live data, copies and processors. A backup existing is not proof it restores.
+13. **Release and incident accountability.** Maintain threat models and deployment evidence, name owners, preserve incident evidence, define rollback and stop affected release for severe unresolved security/privacy risks. Never label a checklist as certification.
+
+## Baseline applicability and reporting
+
+The current offline package applies authentication and row isolation through local OS/workspace boundaries; a server, RLS policy and rate-limiting service are not implemented or authorised. Source/helper, validation/export, package/CI and confidential-data issues are reportable security concerns. Existing reporting guidance remains; no new exclusions or safe-harbour promise is created. Historical test notes must be read with dated T02–T06 evidence, not as fresh verification.

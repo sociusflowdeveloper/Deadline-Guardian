@@ -115,3 +115,8 @@ Read [the canonical skill](skills/academic-deadline-drift-guard/SKILL.md) and it
 The unchanged weighted scorecard reaches 85/100 only after the reviewed T05/T06 technical evidence. Remaining points depend on real demand interviews, rights/privacy clearance, actual host runs and an authorised release decision. Public product release remains NO-GO.
 
 Run the maintainer security review aid with `python -B scripts/security_check.py --history`. It scans non-ignored current repository files and reachable objects available locally, including bounded archive members, without extracting or executing them. Exit 0 means no heuristic findings in that scope; 1 requires review; 2 means the scan is incomplete. CI uses a shallow checkout and reports that limitation. It does not fetch remote history or scan student workspaces.
+
+
+## Complete documentation baseline
+
+See [DOCUMENTATION-INDEX.md](DOCUMENTATION-INDEX.md) for the eighteen requested engineering, security, legal/data, product, architecture, agent and design document categories and pending age/retention/commercial refinements. These are draft policies and scoped requirements, not new runtime/security/host evidence or product release approval. Existing API, frozen contract and ticket status remain unchanged.
