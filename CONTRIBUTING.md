@@ -1,0 +1,5 @@
+# Contributing
+
+**Status: DRAFT.** Reviewed against repository source on 12 November 2026 (Asia/Singapore). Owner approval, live configuration and operational execution are not established by this document.
+
+For Deadline Guardian use one authorised ticket per session/branch/PR; this adoption is ticket DOC-BASELINE-2026-11-12. Preserve the frozen contract and Apache licence. Run TESTING.md checks. Never push changes directly to main, force-push or bypass required checks. The current Managing Director request authorises these documentation PRs and merging when ready; it does not adopt legal drafts. Apply current company reviewer exceptions only where explicitly authorised. Review code, docs, data handling, licence obligations, acceptance criteria and rollback together. Definition of done: accurate source-linked documents, complete register, no secrets or real data, passing proportionate checks, resolved review findings and verified merge/deployment state. Preserve unrelated work and historical records.

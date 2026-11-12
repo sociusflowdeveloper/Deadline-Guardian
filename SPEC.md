@@ -13,7 +13,7 @@
 
 **Problem.** A student has an old assessment brief and a newer announcement. A calendar may still show the old deadline, or two notices may disagree. Existing extraction-to-calendar tools do not always show the provenance, distinguish a missing item from a cancellation or require resolution before applying changes.
 
-**Primary user.** A tertiary student comparing course instructions the student is authorised to use. Initial user testing should prioritise people aged 18 or over. Use by or involving minors requires the safeguards in `PRIVACY POLICY.md` and a new age-risk review.
+**Primary user.** A tertiary student comparing course instructions the student is authorised to use. Initial user testing should prioritise people aged 18 or over. Use by or involving minors requires the safeguards in `PRIVACY-POLICY.md` and a new age-risk review.
 
 **Job to be done.** Given two snapshots or a prior record and new notice, produce an evidence-linked list of added, changed, explicitly cancelled, conflicting and unresolved deadlines, without writing to calendars automatically.
 
@@ -110,14 +110,14 @@ No Supabase, Firebase, S3, Vercel, Cloudflare, Stripe or AI API keys are require
 ```text
 Deadline-Guardian/
 ├── README.md
-├── PRODUCT_DESCRIPTION.md
+├── PRODUCT-DESCRIPTION.md
 ├── SPEC.md
 ├── SECURITY.md
-├── CODE_STYLE.md
+├── CODE-STYLE.md
 ├── DATABASE.md
-├── API_GUIDE.md
-├── PRIVACY POLICY.md
-├── TERMS.md
+├── API-GUIDE.md
+├── PRIVACY-POLICY.md
+├── TERMS-OF-USE.md
 ├── DATA.md
 ├── IP.md
 ├── DELETE.md

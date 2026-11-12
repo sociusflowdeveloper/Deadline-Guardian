@@ -34,3 +34,7 @@ No deadlines or appointments have been fabricated. Review at the next ticket han
 ## Documentation baseline update — 9 November 2026 (SGT)
 
 The eighteen requested document categories are now present (existing detailed documents preserved, eight companions added). This is documentation coverage only. Historical 85/100 engineering estimate is not increased; no fresh runtime, host, legal, demand or release evidence is created. Draft PR review and all listed product-release gates remain open. See DOCUMENTATION-INDEX.md and VERSION_LOG.md.
+
+## REPO-BASELINE assessment — 12 November 2026 SGT
+
+Trigger-based register now exposes controlled-record and host/rights/privacy gaps explicitly. Documentation coverage earns no extra technical points; historical 85/100 estimate remains historical and public product release remains NO-GO. No new user demand, host compatibility or legal approval evidence. See docs/DOCS-REGISTER.md.

@@ -21,11 +21,11 @@
 
 - [x] `SPEC.md` draft.
 - [x] `SECURITY.md` draft.
-- [x] `CODE_STYLE.md` draft.
+- [x] `CODE-STYLE.md` draft.
 - [x] `DATABASE.md` design / explicit no-database decision.
-- [x] `API_GUIDE.md` proposed contracts / no HTTP endpoints.
-- [x] `PRIVACY POLICY.md` **unapproved publication draft**.
-- [x] `TERMS.md` **unapproved legal draft**.
+- [x] `API-GUIDE.md` proposed contracts / no HTTP endpoints.
+- [x] `PRIVACY-POLICY.md` **unapproved publication draft**.
+- [x] `TERMS-OF-USE.md` **unapproved legal draft**.
 - [x] `DATA.md` proposed data inventory and retention.
 - [x] `IP.md` clearance plan; actual clearance **open**.
 - [x] `DELETE.md` no-account deletion guidance + future account spec.

@@ -63,3 +63,8 @@ CONFIRMED Git history: merge f2b2929; extracted documentation ec91efb; prototype
 
 **CONFIRMED — user decision, 9 November 2026 (Asia/Singapore):** the public privacy contact is pratheeksha@sociusflow.com. This confirms the selected address only. Actual mailbox monitoring, response-process readiness and formal statutory DPO appointment remain UNKNOWN and require separate evidence.
 Updated draft privacy/terms/data/deletion/index contact statements only; historical records, licences and runtime remain unchanged. Verification: changed files are Markdown; confirmed address and UNKNOWN operational limitations reviewed. No email sent or mailbox/provider setting changed.
+
+
+## DOC-BASELINE-2026-11-12 — 12 November 2026 SGT
+
+Documentation adoption only: populated trigger profile; canonical API/style/privacy/terms/architecture names with compatibility pointers; register and operational/privacy/rights requirements. Python helper, contracts, historical evidence, skill package, original ZIP and Apache licence unchanged. Verification: exact commands/results belong to this PR; no deployment or host invocation is asserted here. Current product NO-GO and score remain unchanged. Rollback: reviewed revert, no migration.
