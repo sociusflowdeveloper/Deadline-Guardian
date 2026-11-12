@@ -68,3 +68,7 @@ Updated draft privacy/terms/data/deletion/index contact statements only; histori
 ## DOC-BASELINE-2026-11-12 — 12 November 2026 SGT
 
 Documentation adoption only: populated trigger profile; canonical API/style/privacy/terms/architecture names with compatibility pointers; register and operational/privacy/rights requirements. Python helper, contracts, historical evidence, skill package, original ZIP and Apache licence unchanged. Verification: exact commands/results belong to this PR; no deployment or host invocation is asserted here. Current product NO-GO and score remain unchanged. Rollback: reviewed revert, no migration.
+
+### DOC-BASELINE verification evidence
+
+On 12 November 2026 SGT the local Python suite ran 76 tests successfully (one history test skipped without local Git). Initial PR CI passed all 76 tests, security scan and compilation on Python 3.11/3.13, then failed only on copied Markdown trailing spaces; those spaces were removed, preserving CI. Candidate d1d9b4b6bc91bf83ccf8f45411c341d4783e2d5a passed both validation jobs in Actions run 43170825169. Independent integration-agent review inspected the documentation/file inventory and accepted scope. Any later candidate still requires fresh CI before merge. Host/privacy/rights/release gates remain open; no installation or product release occurred.
