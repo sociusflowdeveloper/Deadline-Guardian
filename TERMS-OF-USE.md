@@ -4,9 +4,9 @@
 
 > **Repository reconciliation, 1 November 2026 (SGT):** These remain draft terms without an effective date or acceptance flow. Existing source licensing does not establish approval of these user terms or compatibility claims. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
 
-**DRAFT FOR LEGAL AND MANAGEMENT REVIEW — NOT IN FORCE, PUBLIC DRAFT; NOT EFFECTIVE**  
-**Proposed operator/publisher:** SociusFlow Pte. Ltd. | **Product:** Academic Deadline Drift Guard  
-**Draft date:** 1 November 2026 (SGT) | **Effective date:** NOT SET  
+**DRAFT FOR LEGAL AND MANAGEMENT REVIEW — NOT IN FORCE, PUBLIC DRAFT; NOT EFFECTIVE**
+**Proposed operator/publisher:** SociusFlow Pte. Ltd. | **Product:** Academic Deadline Drift Guard
+**Draft date:** 1 November 2026 (SGT) | **Effective date:** NOT SET
 **Governing law:** Singapore, subject to non-excludable rights and applicable mandatory laws elsewhere.
 
 **Important distinction.** For open-source code redistributed under an approved licence, the relevant licence controls the permissions for copying, using and modifying that code. These proposed terms cover any official project site or operator-provided service if launched; they do not silently revoke an open-source licence or bind a person merely for viewing a public GitHub repository. No hosted service exists in the v0.1 architecture.

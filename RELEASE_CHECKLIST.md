@@ -3,7 +3,7 @@
 > **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
 
-**Snapshot:** 1 November 2026 SGT | **State:** CONSTRAINED PROTOTYPE AUTHORISED; T01 CONTRACT ARTEFACTS; PUBLIC PRODUCT RELEASE NOT APPROVED.  
+**Snapshot:** 1 November 2026 SGT | **State:** CONSTRAINED PROTOTYPE AUTHORISED; T01 CONTRACT ARTEFACTS; PUBLIC PRODUCT RELEASE NOT APPROVED.
 `[x]` means this document exists in the **pack** (not approved, implemented or effective). `[ ]` means open. `N/A v0.1` means architecturally absent **only if the scope remains unchanged**.
 
 ## 1. Plan first

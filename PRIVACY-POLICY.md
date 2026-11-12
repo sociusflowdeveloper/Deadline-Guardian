@@ -4,9 +4,9 @@
 
 > **Repository reconciliation, 1 November 2026 (SGT):** This remains an unapproved privacy draft, not a statement of verified processing. The repository is already public; no company contact, processor setting or deletion promise has been operationally verified in this work. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
 
-**DRAFT — NOT APPROVED FOR PUBLICATION OR REPRESENTED AS AN IMPLEMENTED PRIVACY PROGRAMME**  
-**Product:** Academic Deadline Drift Guard | **Proposed publisher:** SociusFlow Pte. Ltd.  
-**Draft date:** 1 November 2026, Singapore Time | **Jurisdictional baseline:** Singapore  
+**DRAFT — NOT APPROVED FOR PUBLICATION OR REPRESENTED AS AN IMPLEMENTED PRIVACY PROGRAMME**
+**Product:** Academic Deadline Drift Guard | **Proposed publisher:** SociusFlow Pte. Ltd.
+**Draft date:** 1 November 2026, Singapore Time | **Jurisdictional baseline:** Singapore
 **Contact routing:** CONFIRMED by current user decision, 9 November 2026 (SGT): public privacy contact `pratheeksha@sociusflow.com`. Actual mailbox monitoring, response-process readiness and formal statutory DPO appointment remain UNKNOWN; the selected address does not establish those facts.
 
 ## 1. Scope and operating distinction

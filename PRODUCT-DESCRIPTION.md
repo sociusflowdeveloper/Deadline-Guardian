@@ -4,12 +4,12 @@
 
 # SociusFlow Open Agent Skill: Product Discovery and Repository Specification
 
-**Status:** Product PROPOSAL — documentation publicly present; product not approved, implemented, tested or released  
-**Research date:** 1 November 2026 (Singapore Time)  
-**Product sponsor:** SociusFlow Pte. Ltd. (proposed)  
-**Repository:** [`sociusflowdeveloper/Deadline-Guardian`](https://github.com/sociusflowdeveloper/Deadline-Guardian) (existence confirmed; no product release inferred)  
-**Recommended skill identifier:** `academic-deadline-drift-guard`  
-**Target hosts:** Claude, eligible ChatGPT/Codex environments, and supported Grok skill environments  
+**Status:** Product PROPOSAL — documentation publicly present; product not approved, implemented, tested or released
+**Research date:** 1 November 2026 (Singapore Time)
+**Product sponsor:** SociusFlow Pte. Ltd. (proposed)
+**Repository:** [`sociusflowdeveloper/Deadline-Guardian`](https://github.com/sociusflowdeveloper/Deadline-Guardian) (existence confirmed; no product release inferred)
+**Recommended skill identifier:** `academic-deadline-drift-guard`
+**Target hosts:** Claude, eligible ChatGPT/Codex environments, and supported Grok skill environments
 **MVP objective:** A working, portable, evidence-led Agent Skill that can be demonstrated using fictional data in two focused development days.
 
 > **Evidence caveat.** There is no reliable method of proving that an equivalent skill does not exist anywhere. The opportunity proposed below is a *differentiated combination of capabilities* based on a bounded review of publicly discoverable projects, not a claim of worldwide novelty. All scores, development estimates and commercial expectations are internal assumptions until validated.
@@ -136,7 +136,7 @@ Formula: `Weighted result = Σ (criterion weight × score / 5)`. Example for A: 
 
 ### 5.3 User-facing example
 
-**Old brief (fictional):** `Marketing report due 12 November 2026, 17:00 SGT.`  
+**Old brief (fictional):** `Marketing report due 12 November 2026, 17:00 SGT.`
 **New portal notice (fictional):** `Marketing report deadline moved to 14 November 2026, 23:59 SGT.`
 
 **Expected result:**

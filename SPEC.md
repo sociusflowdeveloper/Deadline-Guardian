@@ -3,10 +3,10 @@
 > **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
 
-**Document ID:** ADDG-SPEC-001  
-**Version:** 0.2.0-prototype-contract | **Date:** 1 November 2026, SGT  
+**Document ID:** ADDG-SPEC-001
+**Version:** 0.2.0-prototype-contract | **Date:** 1 November 2026, SGT
 **Classification:** Prototype engineering decisions adopted under user direction; empirical demand, comparator/export execution, host tests and product release remain unverified; T02 validator evidence is recorded separately
-**Proposed sponsor:** SociusFlow Pte. Ltd. | **Decision owner:** Managing Director | **Technical owner:** CTO  
+**Proposed sponsor:** SociusFlow Pte. Ltd. | **Decision owner:** Managing Director | **Technical owner:** CTO
 **Decision:** GO for the constrained offline fictional-data prototype under DG-DEC-001; **NO-GO for public release** until the listed gates are evidenced.
 
 ## 1. Problem, user and outcome

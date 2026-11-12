@@ -87,7 +87,6 @@ Assessment: source-only documentation adoption; all new assessments stay DRAFT. 
 | Model-data-use assessment | AI-DISCLOSURE.md; SECURITY.md; TESTING.md | Engineering / Admin | T7 | DRAFT | 2026-11-12 | 12 November 2026 (Asia/Singapore) | Profile/feature/provider/release/annual review | UNKNOWN host evidence; requirements recorded, no external model/version approved |
 | Human review procedure | AI-DISCLOSURE.md; SECURITY.md; TESTING.md | Engineering / Admin | T7 | DRAFT | 2026-11-12 | 12 November 2026 (Asia/Singapore) | Profile/feature/provider/release/annual review | UNKNOWN host evidence; requirements recorded, no external model/version approved |
 | Model-change log | AI-DISCLOSURE.md; SECURITY.md; TESTING.md | Engineering / Admin | T7 | DRAFT | 2026-11-12 | 12 November 2026 (Asia/Singapore) | Profile/feature/provider/release/annual review | UNKNOWN host evidence; requirements recorded, no external model/version approved |
-
 | docs/DOCS-REGISTER.md | docs/DOCS-REGISTER.md | Admin / Engineering | C7 | DRAFT | 2026-11-12 | 12 November 2026 SGT | Every affected change | This file; owner acceptance pending |
 
 ## Not-applicable triggers

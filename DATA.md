@@ -3,7 +3,7 @@
 > **Repository reconciliation, 1 November 2026 (SGT):** T02 validator runs use fictional inputs only; input bounds, error redaction and no-output-file behaviour have focused tests. No real-user processing, provider retention or operator deletion process is verified. Public GitHub distribution already applies to the original ZIP; retention proposals remain unapproved. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
 
 **Status:** Local T02–T04 prototype code exists; the wider data/retention policy remains proposed, with no deployed service or real-user processing verified.
-**Scope:** Academic Deadline Drift Guard v0.1 plus separately identified optional project communications.  
+**Scope:** Academic Deadline Drift Guard v0.1 plus separately identified optional project communications.
 **Rule:** Every new data type, telemetry system, hosted storage area or third party requires a change to this table, the privacy notice, security review and approval **before use**.
 
 ## 1. Data inventory
