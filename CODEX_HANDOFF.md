@@ -7,7 +7,7 @@
 Use this prompt for a fresh coding session. Python standard-library implementation is suitable for Codex with low-to-medium reasoning using DG-DEC-001 and the accepted T01 contract. Do not interpret this hand-off as a change to repository approval gates.
 
 ```text
-Work only in sociusflowdeveloper/Deadline-Guardian. Use British English and Asia/Singapore timestamps. Read AGENTS.md, SPEC.md, SECURITY.md, CODE_STYLE.md, DATABASE.md, API_GUIDE.md, DATA.md, TICKETS.md, AI_WORKING_RULES.md, DISCOVERY.md and BOOTSTRAP.md before editing.
+Work only in sociusflowdeveloper/Deadline-Guardian. Use British English and Asia/Singapore timestamps. Read AGENTS.md, SPEC.md, SECURITY.md, CODE-STYLE.md, DATABASE.md, API-GUIDE.md, DATA.md, TICKETS.md, AI_WORKING_RULES.md, DISCOVERY.md and BOOTSTRAP.md before editing.
 
 1. Inspect status, current default-branch SHA, applicable instructions and open PRs. Preserve unrelated work, the historical ZIP, existing LICENSE and existing .gitignore rules. Work through a feature branch and PR, without direct main pushes, force pushes, branch deletion, merging or deployment.
 2. Read DG-DEC-001 in DECISIONS.md. T00 prototype decisions are adopted with unvalidated-demand assumptions; five interviews remain a wider-investment/product-launch gate, not a T02 prerequisite. Confirm the actual T01 independent review/check record. Do not invent interviews, ownership or release approval.

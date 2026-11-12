@@ -2,7 +2,7 @@
 
 **Prepared:** 9 November 2026 (Asia/Singapore). **Organisation:** SociusFlow Pte. Ltd. **Status:** engineering documentation draft for review. Requirements below do not establish implementation, production readiness or legal approval.
 
-AGENTS.md and AI_WORKING_RULES.md remain the repository entry points and authoritative specific workflow. Read the documentation index plus SPEC.md, SECURITY.md, CODE_STYLE.md, DATABASE.md, API_GUIDE.md and affected release/privacy/design documents before code.
+AGENTS.md and AI_WORKING_RULES.md remain the repository entry points and authoritative specific workflow. Read the documentation index plus SPEC.md, SECURITY.md, CODE-STYLE.md, DATABASE.md, API-GUIDE.md and affected release/privacy/design documents before code.
 
 Operate on one authorised ticket/session/branch/PR. The current request authorises a documentation baseline only. Do not add new runtime/network/auth/database/billing, install the skill into a user account, alter provider settings, send messages, merge or release without separate authority. Preserve Apache-2.0 LICENSE, frozen contracts, source ZIP and historical verification.
 

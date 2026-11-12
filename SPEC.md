@@ -3,17 +3,17 @@
 > **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
 
-**Document ID:** ADDG-SPEC-001  
-**Version:** 0.2.0-prototype-contract | **Date:** 1 November 2026, SGT  
+**Document ID:** ADDG-SPEC-001
+**Version:** 0.2.0-prototype-contract | **Date:** 1 November 2026, SGT
 **Classification:** Prototype engineering decisions adopted under user direction; empirical demand, comparator/export execution, host tests and product release remain unverified; T02 validator evidence is recorded separately
-**Proposed sponsor:** SociusFlow Pte. Ltd. | **Decision owner:** Managing Director | **Technical owner:** CTO  
+**Proposed sponsor:** SociusFlow Pte. Ltd. | **Decision owner:** Managing Director | **Technical owner:** CTO
 **Decision:** GO for the constrained offline fictional-data prototype under DG-DEC-001; **NO-GO for public release** until the listed gates are evidenced.
 
 ## 1. Problem, user and outcome
 
 **Problem.** A student has an old assessment brief and a newer announcement. A calendar may still show the old deadline, or two notices may disagree. Existing extraction-to-calendar tools do not always show the provenance, distinguish a missing item from a cancellation or require resolution before applying changes.
 
-**Primary user.** A tertiary student comparing course instructions the student is authorised to use. Initial user testing should prioritise people aged 18 or over. Use by or involving minors requires the safeguards in `PRIVACY POLICY.md` and a new age-risk review.
+**Primary user.** A tertiary student comparing course instructions the student is authorised to use. Initial user testing should prioritise people aged 18 or over. Use by or involving minors requires the safeguards in `PRIVACY-POLICY.md` and a new age-risk review.
 
 **Job to be done.** Given two snapshots or a prior record and new notice, produce an evidence-linked list of added, changed, explicitly cancelled, conflicting and unresolved deadlines, without writing to calendars automatically.
 
@@ -110,14 +110,14 @@ No Supabase, Firebase, S3, Vercel, Cloudflare, Stripe or AI API keys are require
 ```text
 Deadline-Guardian/
 ├── README.md
-├── PRODUCT_DESCRIPTION.md
+├── PRODUCT-DESCRIPTION.md
 ├── SPEC.md
 ├── SECURITY.md
-├── CODE_STYLE.md
+├── CODE-STYLE.md
 ├── DATABASE.md
-├── API_GUIDE.md
-├── PRIVACY POLICY.md
-├── TERMS.md
+├── API-GUIDE.md
+├── PRIVACY-POLICY.md
+├── TERMS-OF-USE.md
 ├── DATA.md
 ├── IP.md
 ├── DELETE.md

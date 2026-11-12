@@ -3,7 +3,7 @@
 > **Current decision, 1 November 2026 (SGT):** The user has authorised resolving T00 discovery decisions and T01 schema here. Proceed with an offline fictional-data prototype under recorded, unvalidated-demand assumptions. The five interviews are a wider-investment/product-launch gate. Canonical T01 artefacts replace earlier illustrative contracts; application execution and product release remain separate gates. See [DECISIONS.md](DECISIONS.md) and [CONTRACT.md](CONTRACT.md).
 
 
-**Publisher (proposed):** SociusFlow Pte. Ltd.  
+**Publisher (proposed):** SociusFlow Pte. Ltd.
 **Status:** T05 PACKAGE AND T06 LOCAL SECURITY CHECKS / HOST TESTS PENDING / NO PRODUCT RELEASE
 **Prepared:** 1 November 2026 (Asia/Singapore) | **Default legal context:** Singapore
 
@@ -17,15 +17,15 @@ These files are **pre-repository planning, risk, API and legal drafts** prepared
 
 | File | Purpose |
 |---|---|
-| [PRODUCT_DESCRIPTION.md](PRODUCT_DESCRIPTION.md) | Product research, three contenders and weighted decision |
+| [PRODUCT-DESCRIPTION.md](PRODUCT-DESCRIPTION.md) | Product research, three contenders and weighted decision |
 | [SPEC.md](SPEC.md) | Problem, decisions, scope, done criteria, acceptance and stop-ship |
 | [TICKETS.md](TICKETS.md) | Small independently reviewable agent tasks |
 | [SECURITY.md](SECURITY.md) | Threat model and complete MVP/future backend security controls |
-| [CODE_STYLE.md](CODE_STYLE.md) | Python and Agent Skill conventions |
+| [CODE-STYLE.md](CODE-STYLE.md) | Python and Agent Skill conventions |
 | [DATABASE.md](DATABASE.md) | No-DB decision, transient records and hosted readiness |
-| [API_GUIDE.md](API_GUIDE.md) | Proposed offline CLI and JSON schema |
-| [PRIVACY POLICY.md](PRIVACY%20POLICY.md) | Draft privacy notice — not approved for publication |
-| [TERMS.md](TERMS.md) | Draft user terms — legal review required |
+| [API-GUIDE.md](API-GUIDE.md) | Proposed offline CLI and JSON schema |
+| [PRIVACY-POLICY.md](PRIVACY-POLICY.md) | Draft privacy notice — not approved for publication |
+| [TERMS-OF-USE.md](TERMS-OF-USE.md) | Draft user terms — legal review required |
 | [DATA.md](DATA.md) | Data register, planned retention and host boundaries |
 | [IP.md](IP.md) | Name/trade-mark and copyright/licence clearance register |
 | [DELETE.md](DELETE.md) | No-account deletion model and future account flow |
@@ -120,3 +120,8 @@ Run the maintainer security review aid with `python -B scripts/security_check.py
 ## Complete documentation baseline
 
 See [DOCUMENTATION-INDEX.md](DOCUMENTATION-INDEX.md) for the eighteen requested engineering, security, legal/data, product, architecture, agent and design document categories and pending age/retention/commercial refinements. These are draft policies and scoped requirements, not new runtime/security/host evidence or product release approval. Existing API, frozen contract and ticket status remain unchanged.
+
+
+## Documentation governance
+
+Accountable owner: Admin, SociusFlow Pte. Ltd. Start with [REPO-BASELINE.md](REPO-BASELINE.md) and [the documentation register](docs/DOCS-REGISTER.md). Unknown profile answers trigger requirements until resolved. All newly assessed register entries remain DRAFT until the owner records approval and evidence. Historical release/security records retain their original evidence date.

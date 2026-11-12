@@ -4,7 +4,7 @@
 
 ## Current boundary
 
-CONFIRMED: the inspected repository contains a Python standard-library local validator/comparator/exporter and a skill package. There are no hosted HTTP endpoints, accounts, database or paid API dependencies in this approved scope. API_GUIDE.md and CONTRACT.md are canonical. Do not add fictional authentication/RLS/database gates as implemented components.
+CONFIRMED: the inspected repository contains a Python standard-library local validator/comparator/exporter and a skill package. There are no hosted HTTP endpoints, accounts, database or paid API dependencies in this approved scope. API-GUIDE.md and CONTRACT.md are canonical. Do not add fictional authentication/RLS/database gates as implemented components.
 
 ## Release gates
 

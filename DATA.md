@@ -3,7 +3,7 @@
 > **Repository reconciliation, 1 November 2026 (SGT):** T02 validator runs use fictional inputs only; input bounds, error redaction and no-output-file behaviour have focused tests. No real-user processing, provider retention or operator deletion process is verified. Public GitHub distribution already applies to the original ZIP; retention proposals remain unapproved. See [BOOTSTRAP.md](BOOTSTRAP.md) and [DISCOVERY.md](DISCOVERY.md).
 
 **Status:** Local T02–T04 prototype code exists; the wider data/retention policy remains proposed, with no deployed service or real-user processing verified.
-**Scope:** Academic Deadline Drift Guard v0.1 plus separately identified optional project communications.  
+**Scope:** Academic Deadline Drift Guard v0.1 plus separately identified optional project communications.
 **Rule:** Every new data type, telemetry system, hosted storage area or third party requires a change to this table, the privacy notice, security review and approval **before use**.
 
 ## 1. Data inventory
@@ -84,7 +84,7 @@ The user may explicitly persist draft reports under the workspace. Reports conta
 
 This remains a draft, not an approved privacy notice or live retention commitment. User-controlled inputs/reports/staging remnants and device/cloud backups remain until the user deletes them under their own storage arrangements; no operator expiry job or hosted backup is introduced. Independent AI host chats/uploads follow verified host settings, not a helper deletion guarantee.
 
-PROPOSAL only: if optional support correspondence is introduced, retain for 12 months after closure, subject to documented lawful necessity/holds and privacy review. No support-data collection is asserted. Future hosted categories require separately approved numerical targets and implementation; no fictional 30-day account-deletion or 35-day operator-backup promise applies to this offline package. Business/legal records require a separately justified schedule. PRIVACY POLICY.md and DELETE.md refer to this file as canonical retention proposal.
+PROPOSAL only: if optional support correspondence is introduced, retain for 12 months after closure, subject to documented lawful necessity/holds and privacy review. No support-data collection is asserted. Future hosted categories require separately approved numerical targets and implementation; no fictional 30-day account-deletion or 35-day operator-backup promise applies to this offline package. Business/legal records require a separately justified schedule. PRIVACY-POLICY.md and DELETE.md refer to this file as canonical retention proposal.
 
 
 ## Privacy contact confirmation — 9 November 2026 (SGT)

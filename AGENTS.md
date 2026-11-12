@@ -5,7 +5,7 @@
 
 **Read this file before editing. Current state: T05 repository skill package plus T02–T04 local helper implemented on this branch; T06 local package security evidence is recorded separately; actual host installation and product release remain open. See VERSION_LOG.md and COMPLETENESS.md for evidence and outstanding gates.**
 
-1. Read, in order: `SPEC.md`, `SECURITY.md`, `CODE_STYLE.md`, `DATABASE.md`, `API_GUIDE.md`, `DATA.md`, `TICKETS.md`, `AI_WORKING_RULES.md`.
+1. Read, in order: `SPEC.md`, `SECURITY.md`, `CODE-STYLE.md`, `DATABASE.md`, `API-GUIDE.md`, `DATA.md`, `TICKETS.md`, `AI_WORKING_RULES.md`.
 2. Use DG-DEC-001 for the delegated T00 prototype decision and the canonical T01 contract. Follow the recorded independent contract review/verification outcome before T02. Interview validation remains open and cannot be labelled passed.
 3. Operate on exactly **one authorised ticket per fresh agent session**, branch and PR. No ticket = no code changes.
 4. Never change a requirement by changing code. Submit a SPEC/ADR revision for decision first.
@@ -29,3 +29,8 @@ Update `COMPLETENESS.md` whenever delivered scope or verification changes. Recon
 ## Documentation baseline companion
 
 Read DOCUMENTATION-INDEX.md and AI-AGENT-INSTRUCTIONS.md plus applicable launch, threat, architecture, privacy and design files before affected changes. Preserve existing ticket, independent review, language, version-log, licence and release boundaries. Draft legal documents and proposals do not authorise processing, sale, merge or release.
+
+
+## REPO-BASELINE maintenance
+
+Read REPO-BASELINE.md, README.md, SPEC.md, AGENTS.md and docs/DOCS-REGISTER.md before changes. Reassess T1–T17 when data, integrations, users or release scope changes. Update affected documents and register in the same PR. Do not set APPROVED, IMPLEMENTED or VERIFIED statuses; propose evidence for the owner. Keep restricted records, signed contracts, real personal data and detailed unresolved security findings outside Git. Canonical API-GUIDE.md and CODE-STYLE.md supersede legacy underscore entry points. Preserve specific security, ticket, version, licence and review rules above.
